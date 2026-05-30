@@ -4,7 +4,7 @@ https://leetcode.com/problems/move-zeroes/
 
 Problem: Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.
 
-Approach: [FILL AFTER SOLVING]
+Approach:
 - Use read pointer to scan array, write pointer to track next non-zero position
 - First pass: Move non-zero elements to the front
 - Second pass: Fill remaining positions with zeroes

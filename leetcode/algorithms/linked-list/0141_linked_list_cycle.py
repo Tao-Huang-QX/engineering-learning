@@ -4,7 +4,7 @@ https://leetcode.com/problems/linked-list-cycle/
 
 Problem: Given head of a linked list, determine if it has a cycle.
 
-Approach:
+Approach: Floyd's cycle detection
 - Slow pointer moves 1 step, fast pointer moves 2 steps
 - If they meet, cycle exists; if fast reaches end, no cycle
 
@@ -28,6 +28,31 @@ def has_cycle(head: ListNode | None) -> bool:
 
     Returns:
         True if there is a cycle, False otherwise
+    """
+    """
+    Let L = distance from head to cycle start
+    Let C = cycle length
+    Let M = distance from cycle start to meeting point
+    Distance traveled
+    Slow: L + M
+    Fast: L + M + k*C
+    Since fast move 2x speed
+    2x(L + M) = L + M + k*C
+    L = k*C - M
+    Based on the subtle math above, to implement the solution to find the cycle start:
+    def detect_cycle_start(head: ListNode | None) -> ListNode | None:
+        slow = fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+            if slow == fast:
+                break
+        else:
+            return None
+        slow = head
+        while slow != fast:
+            slow = slow.next
+            fast = fast.next
     """
     slow = fast = head
     while fast and fast.next:

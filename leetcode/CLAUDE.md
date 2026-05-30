@@ -170,6 +170,10 @@ After solving, add a one-line entry at the bottom of the solution file:
 # solved: 2026-05-25, medium, 60min, Permutation in String
 # solved: 2026-05-26, medium, 30min, Daily Temperatures
 # solved: 2026-05-26, medium, 30min, Kth Largest Element in an Array
+# solved: 2026-05-29, medium, 30min, Maximum Subarray
+# solved: 2026-05-29, medium, 30min, House Robber
+# solved: 2026-05-29, medium, 30min, Climbing Stairs
+# solved: 2026-05-29, medium, 60min, Coin Change
 ```
 
 Update the queue table above by marking completed rows (e.g. prefix with `x` in the # column).
