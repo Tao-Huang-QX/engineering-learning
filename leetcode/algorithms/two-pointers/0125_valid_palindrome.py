@@ -6,7 +6,7 @@ Problem: A phrase is a palindrome if, after converting all uppercase letters int
 
 Approach:
 - two pointers from each end of the string
-- skip the non-alphanumeric characters and duplicate characters
+- skip the non-alphanumeric characters and non-alphanumeric characters
 - compare the lower case version of characters
 
 Time: O(n)   Space: O(1)

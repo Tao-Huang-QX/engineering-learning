@@ -12,7 +12,7 @@ Time: O(...)   Space: O(...)
 """
 
 
-def solve():
+def solve(*args, **kwargs):
     """Solution implementation."""
     pass
 

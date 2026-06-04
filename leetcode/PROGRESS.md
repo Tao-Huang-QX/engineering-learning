@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-05-31
-Completed: 30/148 (20%)
+Last updated: 2026-06-04
+Completed: 33/96 (34%)
 
 ## Solve History
 
@@ -36,4 +36,7 @@ Completed: 30/148 (20%)
 # solved: 2026-05-29, medium, 60min, Coin Change
 # solved: 2026-05-31, medium, 60min, Clone Graph
 # solved: 2026-05-31, medium, 60min, Top K Frequent Elements
+# solved: 2026-06-02, medium, 25min, Container With Most Water
+# solved: 2026-06-02, medium, 25min, Two Sum II
+# solved: 2026-06-02, hard, 60min, Trapping Rain Water
 ```
