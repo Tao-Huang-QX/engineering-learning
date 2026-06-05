@@ -39,4 +39,7 @@ Completed: 33/96 (34%)
 # solved: 2026-06-02, medium, 25min, Container With Most Water
 # solved: 2026-06-02, medium, 25min, Two Sum II
 # solved: 2026-06-02, hard, 60min, Trapping Rain Water
+# solved: 2026-06-04, medium, 30min, 3Sum Closest
+# solved: 2026-06-04, medium, 30min, 4Sum
+# solved: 2026-06-04, medium, 30min, Minimum Size Subarray Sum
 ```

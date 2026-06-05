@@ -33,7 +33,7 @@ shared/             Cross-domain utilities and helpers
 ### Prerequisites
 
 - Python 3.13+
-- [Poetry](https://python-poetry.org/) for dependency management
+- [pyenv](https://github.com/pyenv/pyenv) for Python version management
 
 ### Setup
 
@@ -42,22 +42,22 @@ shared/             Cross-domain utilities and helpers
 git clone <repo-url>
 cd engineering-learning
 
-# Install dependencies with Poetry
-poetry install
-
-# Activate the virtual environment (optional)
-poetry shell
+# Activate the virtual environment
+pyenv activate engineering-learning
 ```
 
 ### Running Code
 
 ```bash
+# Activate the virtual environment first
+pyenv activate engineering-learning
+
 # LeetCode solutions
-poetry run python leetcode/algorithms/hash-map/0001_two_sum.py
+python leetcode/algorithms/hash-map/0001_two_sum.py
 
 # Linting
-poetry run ruff check .
-poetry run ruff format .
+ruff check .
+ruff format .
 ```
 
 ## Tech Stack
@@ -89,11 +89,6 @@ poetry run ruff format .
 - Python linting: `ruff` (configured in `pyproject.toml`)
 - Line length: 100 characters
 - Target Python version: 3.13
-
-## Progress
-
-- **LeetCode:** 30/148 problems solved (see [leetcode/PROGRESS.md](leetcode/PROGRESS.md))
-- **Roadmap:** Following [labuladong's algorithm framework](https://labuladong.online/zh/roadmap/algo/) (see [leetcode/QUEUE.md](leetcode/QUEUE.md))
 
 ## License
 
