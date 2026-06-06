@@ -44,4 +44,6 @@ Completed: 33/96 (34%)
 # solved: 2026-06-04, medium, 30min, Minimum Size Subarray Sum
 # solved: 2026-06-05, medium, 60min, Partition Labels
 # solved: 2026-06-06, medium, 30min, Longest Substring with At Most K Distinct
+# solved: 2026-06-06, medium, 40min, Find All Anagrams in A String
+# solved: 2026-06-06, medium, 30min, Search in Rotated Sorted Array II
 ```

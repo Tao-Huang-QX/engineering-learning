@@ -102,5 +102,29 @@ Work through in order. Check off as completed.
 | 94 | 201 | [Bitwise AND of Numbers Range](https://leetcode.com/problems/bitwise-and-of-numbers-range/) | M | Bit manipulation |
 | 95 | 847 | [Shortest Path Visiting All Nodes](https://leetcode.com/problems/shortest-path-visiting-all-nodes/) | H | BFS + bitmask |
 | 96 | 23 | [Merge K Sorted Lists](https://leetcode.com/problems/merge-k-sorted-lists/) | H | Divide & conquer / heap |
+| 97 | 128 | [Longest Consecutive Sequence](https://leetcode.com/problems/longest-consecutive-sequence/) | M | HashSet |
+| 98 | 150 | [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/) | M | Stack |
+| 99 | 56 | [Merge Intervals](https://leetcode.com/problems/merge-intervals/) | M | Interval merge |
+| 100 | 239 | [Sliding Window Maximum](https://leetcode.com/problems/sliding-window-maximum/) | H | Monotonic deque |
+| 101 | 416 | [Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/) | M | 0/1 knapsack DP |
+| 102 | 494 | [Target Sum](https://leetcode.com/problems/target-sum/) | M | 0/1 knapsack DP |
+| 103 | 114 | [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) | M | Tree recursion |
+| 104 | 124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | H | Tree DFS + global max |
+| 105 | 173 | [BST Iterator](https://leetcode.com/problems/bst-iterator/) | M | Controlled recursion |
+| 106 | 235 | [Lowest Common Ancestor of BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | M | BST traversal |
+| 107 | 1011 | [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) | M | Binary search on answer |
+| 108 | 692 | [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/) | H | Heap + custom comparator |
+| 109 | 332 | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/) | H | Eulerian path / DFS |
+| 110 | 127 | [Word Ladder](https://leetcode.com/problems/word-ladder/) | H | BFS bidirectional |
+| 111 | 79 | [Word Search](https://leetcode.com/problems/word-search/) | M | DFS + backtracking |
+| 112 | 139 | [Word Break](https://leetcode.com/problems/word-break/) | M | DP on strings |
+| 113 | 140 | [Word Break II](https://leetcode.com/problems/word-break-ii/) | M | DP + backtracking |
+| 114 | 115 | [Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/) | M | 2D DP |
+| 115 | 329 | [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | M | DFS + memo |
+| 116 | 394 | [Decode Ways](https://leetcode.com/problems/decode-ways/) | M | 1D DP |
+| 117 | 695 | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | M | DFS + flood fill |
+| 118 | 130 | [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/) | M | DFS + flood fill |
+| 119 | 402 | [Remove K Digits](https://leetcode.com/problems/remove-k-digits/) | M | Monotonic stack |
+| 120 | 349 | [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/) | M | HashSet |
 
-**Hard problems:** 33, 48, 91, 92, 93, 95, 96 (7 problems)
+**Hard problems:** 33, 48, 91, 92, 93, 95, 96, 100, 104, 108, 109, 110 (12 problems)
