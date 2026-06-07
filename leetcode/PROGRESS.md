@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-06-04
-Completed: 33/96 (34%)
+Last updated: 2026-06-07
+Completed: 43/120 (36%)
 
 ## Solve History
 
@@ -46,4 +46,7 @@ Completed: 33/96 (34%)
 # solved: 2026-06-06, medium, 30min, Longest Substring with At Most K Distinct
 # solved: 2026-06-06, medium, 40min, Find All Anagrams in A String
 # solved: 2026-06-06, medium, 30min, Search in Rotated Sorted Array II
+# solved: 2026-06-07, medium, 45min, Find Minimum in Rotated Sorted Array
+# solved: 2026-06-07, medium, 60min, Remove Duplicates from Sorted List II
+# solved: 2026-06-07, medium, 30min, Partition List
 ```
