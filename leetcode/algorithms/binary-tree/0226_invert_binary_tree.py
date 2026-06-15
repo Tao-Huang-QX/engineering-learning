@@ -32,6 +32,8 @@ def invert_tree(root: TreeNode | None) -> TreeNode | None:
     """
     """
     Note there's an iteration approach available (in case call stack depth is a concern):
+    if root is None:
+    return None
     queue = deque([root])
     while queue:
         node = queue.popleft()

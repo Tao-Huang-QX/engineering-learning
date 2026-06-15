@@ -29,6 +29,10 @@ def search(nums: list[int], target: int) -> int:
     while left <= right:
         middle = (left + right) // 2
 
+        # Handle 2-element case
+        if left == middle and nums[right] == target:
+            return right
+
         if nums[middle] == target:
             return middle
         elif nums[left] < nums[middle]:  # Left half is sorted

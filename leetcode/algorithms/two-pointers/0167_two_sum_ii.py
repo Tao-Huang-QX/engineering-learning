@@ -7,7 +7,7 @@ Problem: Given a 1-indexed array sorted in ascending order, find two numbers tha
 Approach: Two pointers (greedy)
 - Start with left=0, right=len-1 (widest range)
 - If sum < target: move left right (need larger sum)
-- If sum >= target: move right left (need smaller sum or either if equal)
+- If sum > target: move right left (need smaller sum or either if equal)
 
 Time: O(n)   Space: O(1)
 """

@@ -36,7 +36,7 @@ def level_order(root: TreeNode | None) -> list[list[int]]:
         List of lists, where each inner list contains node values at that level
     """
     result = []
-    queue = deque([root])  # Queue for BFS
+    queue = deque([root]) if root else None  # Queue for BFS
     while queue:
         level_size = len(queue)  # Number of nodes at current level
         level_values = []

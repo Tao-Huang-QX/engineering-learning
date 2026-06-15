@@ -5,7 +5,7 @@ https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 Problem: Given a rotated sorted array with duplicates, find the minimum element.
 
 Approach: Modified binary search
-- When nums[left] == nums[right], can't determine sorted half—shrink both bounds
+- When nums[left] == nums[right], can't determine sorted half—shrink by 1 from each end
 - When nums[left] > nums[right], pivot is in right half—search right
 - When nums[left] < nums[right], window is sorted—leftmost is minimum (early exit)
 

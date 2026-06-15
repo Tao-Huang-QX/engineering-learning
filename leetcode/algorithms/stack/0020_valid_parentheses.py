@@ -4,7 +4,7 @@ https://leetcode.com/problems/valid-parentheses/
 
 Problem: Given a string s containing just '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 
-Approach: [FILL AFTER SOLVING]
+Approach:
 - Push opening brackets onto a stack
 - For closing brackets, check if the top matches (using dict)
 - Invalid if stack is empty when closing or wrong bracket type

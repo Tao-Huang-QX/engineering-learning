@@ -32,36 +32,37 @@ def find_anagrams(s: str, p: str) -> list[int]:
     if len(s) < len(p):
         return []
 
-    p_counter = Counter(p)
-    window_counter = Counter(s[: len(p)])
+    p_freq = Counter(p)
+    window_size = len(p)
+    window_freq = Counter(s[:window_size])
     result = []
-    left = 0
     match = 0
-    for char in p_counter:
-        if window_counter[char] == p_counter[char]:
+    for char in p_freq:
+        if window_freq[char] == p_freq[char]:
             match += 1
-    if match == len(p_counter):
+    if match == len(p_freq):
         result.append(0)
 
     for right in range(len(p), len(s)):
-        # Handle s[left] leaving
-        if s[left] in p_counter:
-            if p_counter[s[left]] == window_counter[s[left]]:
+        left_char = s[right - window_size]
+        right_char = s[right]
+        # Handle left char leaving
+        if left_char in p_freq:
+            if p_freq[left_char] == window_freq[left_char]:
                 match -= 1
-            window_counter[s[left]] -= 1
-            if p_counter[s[left]] == window_counter[s[left]]:
+            window_freq[left_char] -= 1
+            if p_freq[left_char] == window_freq[left_char]:
                 match += 1
 
-        if s[right] in p_counter:
-            if p_counter[s[right]] == window_counter[s[right]]:
+        if right_char in p_freq:
+            if p_freq[right_char] == window_freq[right_char]:
                 match -= 1
-            window_counter[s[right]] += 1
-            if p_counter[s[right]] == window_counter[s[right]]:
+            window_freq[right_char] += 1
+            if p_freq[right_char] == window_freq[right_char]:
                 match += 1
 
-        left += 1
-        if match == len(p_counter):
-            result.append(left)
+        if match == len(p_freq):
+            result.append(right - window_size + 1)
     return result
 
 
