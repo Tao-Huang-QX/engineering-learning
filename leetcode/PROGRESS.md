@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-06-07
-Completed: 43/120 (36%)
+Completed: 45/120 (37.5%)
 
 ## Solve History
 
@@ -49,4 +49,6 @@ Completed: 43/120 (36%)
 # solved: 2026-06-07, medium, 45min, Find Minimum in Rotated Sorted Array
 # solved: 2026-06-07, medium, 60min, Remove Duplicates from Sorted List II
 # solved: 2026-06-07, medium, 30min, Partition List
+# solved: 2026-06-16, medium, 60min, Reorder List
+# solved: 2026-06-16, medium, 60min, Sort List
 ```
