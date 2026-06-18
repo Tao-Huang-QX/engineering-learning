@@ -13,11 +13,10 @@ Approach: Slope normalization with GCD
 Time: O(N log(max_coord))   Space: O(N)
 """
 
-
 from math import gcd
 
 
-def solve(friends: list[tuple[int, int]], tim_x: int, tim_y: int) -> int:
+def count_unique_lines(friends: list[tuple[int, int]], tim_x: int, tim_y: int) -> int:
     """Return number of unique lines from Tim's house to all friends' houses."""
     unique_slopes = set()
 
@@ -59,21 +58,9 @@ if __name__ == "__main__":
     ]
 
     for friends, tx, ty, expected in test_cases:
-        result = solve(friends, tx, ty)
+        result = count_unique_lines(friends, tx, ty)
         assert result == expected, f"got {result}, expected {expected}"
 
     print("All tests passed.")
-
-    # For stdin input (uncomment for submission)
-    # first_line = input().split()
-    # num = int(first_line[0])
-    # friends = []
-    # for _ in range(num):
-    #     x, y = map(int, input().split())
-    #     friends.append((x, y))
-    # tim_x = int(input())
-    # tim_y = int(input())
-    # result = solve(friends, tim_x, tim_y)
-    # print(result)
 
 # solved: 2026-06-17, easy, 15min, Unique Lines from Point

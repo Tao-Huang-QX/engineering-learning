@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-06-07
-Completed: 45/120 (37.5%)
+Completed: 47/120 (39.2%)
 
 ## Solve History
 
@@ -51,4 +51,6 @@ Completed: 45/120 (37.5%)
 # solved: 2026-06-07, medium, 30min, Partition List
 # solved: 2026-06-16, medium, 60min, Reorder List
 # solved: 2026-06-16, medium, 60min, Sort List
+# solved: 2026-06-18, medium, 30min, Palindrome Linked List
+# solved: 2026-06-18, hard, 60min, Reverse Nodes in k-Group
 ```

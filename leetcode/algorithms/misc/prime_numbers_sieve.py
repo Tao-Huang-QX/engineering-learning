@@ -12,7 +12,7 @@ Time: O(n log log n)   Space: O(n)
 """
 
 
-def solve(num: int) -> list[int]:
+def prime_numbers(num: int) -> list[int]:
     """Return all prime numbers from 2 to num inclusive."""
     if num < 2:
         return []
@@ -21,7 +21,7 @@ def solve(num: int) -> list[int]:
     is_prime = [True] * (num + 1)
     is_prime[0] = is_prime[1] = False
 
-    for i in range(2, int(num ** 0.5) + 1):
+    for i in range(2, int(num**0.5) + 1):
         if is_prime[i]:
             # Mark all multiples of i as non-prime
             for j in range(i * i, num + 1, i):
@@ -40,12 +40,12 @@ if __name__ == "__main__":
     ]
 
     for num, expected in test_cases:
-        result = solve(num)
+        result = prime_numbers(num)
         assert result == expected, f"{num}: got {result}, expected {expected}"
 
     print("All tests passed.")
 
     # Print output for example
-    print("Example output for 11:", " ".join(map(str, solve(11))))
+    print("Example output for 11:", " ".join(map(str, prime_numbers(11))))
 
 # solved: 2026-06-17, easy, 10min, Prime Numbers Sieve
