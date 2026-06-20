@@ -117,6 +117,14 @@ When asked to explain, Claude:
 - Explains the WHY, not just the WHAT
 - Uses concrete examples from the codebase
 
+### Skill & Auto-Generation Gate
+Local skills (e.g., the `leetcode-quiz` generator) and any quiz/problem-file generation engage **only** when:
+
+1. **Explicit ask** — the user requests it by name or slash command (e.g., `/leetcode-quiz`, "use the leetcode-quiz skill"), OR
+2. **Pasted problem** — the user pastes a LeetCode-style programming problem description clearly meant to be processed into a quiz.
+
+Otherwise: do nothing — no auto-generation, no auto-invocation. When a paste is ambiguous (not clearly a problem to process), ask before generating. The user always drives the trigger; nothing fires silently. (`leetcode/CLAUDE.md` carries the quiz-specific workflow; this section is the authoritative gate.)
+
 ## Workflow Recipes
 
 ### "Let's solve a LeetCode problem"

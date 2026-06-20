@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-06-07
-Completed: 48/120 (40%)
+Completed: 49/120 (40.8%)
 
 ## Solve History
 
@@ -54,4 +54,5 @@ Completed: 48/120 (40%)
 # solved: 2026-06-18, medium, 30min, Palindrome Linked List
 # solved: 2026-06-18, hard, 60min, Reverse Nodes in k-Group
 # solved: 2026-06-19, medium, 60min, Rotate List
+# solved: 2026-06-20, medium, 60min, Copy List with Random Pointer
 ```

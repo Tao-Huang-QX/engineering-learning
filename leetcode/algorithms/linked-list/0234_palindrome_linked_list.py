@@ -13,8 +13,8 @@ Follow-up: Could you do it in O(n) time and O(1) space?
 
 Approach: Fast/slow pointer + reverse second half + compare
 - Slow/fast pointers find the left-middle node: the loop guard
-  `fast.next and fast.next.next` stops `slow` at the first node of the
-  second half for even length, and at the true middle for odd length.
+  `fast.next and fast.next.next` stops `slow` at the last node of the
+  first half for even length, and at the true middle for odd length.
 - Reverse the second half in place starting at slow.next.
 - Walk l1 (head) and l2 (reversed second half) in lockstep; any value
   mismatch means not a palindrome. The left-middle choice makes l2 the

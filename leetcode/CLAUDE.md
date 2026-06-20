@@ -55,9 +55,9 @@ See [PROGRESS.md](PROGRESS.md) for completion history and stats.
 
 `{problem_number}_{slug}.py` — e.g., `0001_two_sum.py`
 
-## Auto-Generate Problem Files
+## Generating Quiz Files (gated)
 
-**Convention:** When starting a new quiz, Claude automatically generates the problem file.
+Quiz files are generated only when the user explicitly asks (by name or `/leetcode-quiz`) OR pastes a LeetCode-style problem description to be processed. Do not auto-generate otherwise, and ask first if a paste is ambiguous. See the repo `CLAUDE.md` "Skill & Auto-Generation Gate" section for the authoritative rule.
 
 **Template structure:**
 - Docstring with problem metadata (number, title, URL, description)
