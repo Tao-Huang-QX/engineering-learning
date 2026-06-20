@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-06-07
-Completed: 49/120 (40.8%)
+Completed: 50/120 (41.7%)
 
 ## Solve History
 
@@ -55,4 +55,5 @@ Completed: 49/120 (40.8%)
 # solved: 2026-06-18, hard, 60min, Reverse Nodes in k-Group
 # solved: 2026-06-19, medium, 60min, Rotate List
 # solved: 2026-06-20, medium, 60min, Copy List with Random Pointer
+# solved: 2026-06-20, easy, 60min, Binary Tree Inorder Traversal
 ```

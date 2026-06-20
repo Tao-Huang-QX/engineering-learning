@@ -118,12 +118,14 @@ When asked to explain, Claude:
 - Uses concrete examples from the codebase
 
 ### Skill & Auto-Generation Gate
-Local skills (e.g., the `leetcode-quiz` generator) and any quiz/problem-file generation engage **only** when:
 
-1. **Explicit ask** — the user requests it by name or slash command (e.g., `/leetcode-quiz`, "use the leetcode-quiz skill"), OR
-2. **Pasted problem** — the user pastes a LeetCode-style programming problem description clearly meant to be processed into a quiz.
+Two flows; the trigger decides which runs:
 
-Otherwise: do nothing — no auto-generation, no auto-invocation. When a paste is ambiguous (not clearly a problem to process), ask before generating. The user always drives the trigger; nothing fires silently. (`leetcode/CLAUDE.md` carries the quiz-specific workflow; this section is the authoritative gate.)
+1. **Skill (`leetcode-quiz`) — requires a concrete problem description handed in.** The skill engages ONLY when the user provides a specific problem description — either pasted, or `/leetcode-quiz` invoked together with a description. It transforms that exact description into a quiz file. If a paste is ambiguous (not clearly a problem to process), ask before generating. The skill never fires on its own.
+
+2. **Default practice flow — generate the next quiz from the queue.** When the user wants to practice but has NOT handed in a specific problem (cues: "next", "what's next", "quiz me", "let's do a problem", "give me the next one"), read [leetcode/QUEUE.md](leetcode/QUEUE.md) + [leetcode/PROGRESS.md](leetcode/PROGRESS.md), determine the next undone problem, and write its scaffold: docstring with number/title/URL/Problem/constraints, an empty function named after the problem, a `__main__` block with test cases from the problem, and **no solution or hints**. See `leetcode/CLAUDE.md` for the "next undone" rule.
+
+`leetcode/CLAUDE.md` carries the quiz-specific workflow; this section is the authoritative gate.
 
 ## Workflow Recipes
 

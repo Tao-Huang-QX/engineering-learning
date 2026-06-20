@@ -9,7 +9,9 @@ Transforms a general problem description into a properly formatted quiz file fol
 
 ## Usage
 
-Invoke with: `/leetcode-quiz` or by providing a problem description and asking to create a quiz.
+Invoke with: `/leetcode-quiz` together with a concrete problem description, or by pasting a problem description and asking to create a quiz. This skill requires a specific description to transform — it does not pick problems on its own.
+
+For "next problem" / practice requests where no description is handed in, use the **queue-based default flow** documented in `leetcode/CLAUDE.md` ("Generating Quiz Files"), not this skill.
 
 ## What It Does
 

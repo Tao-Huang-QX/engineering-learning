@@ -55,9 +55,22 @@ See [PROGRESS.md](PROGRESS.md) for completion history and stats.
 
 `{problem_number}_{slug}.py` — e.g., `0001_two_sum.py`
 
-## Generating Quiz Files (gated)
+## Generating Quiz Files
 
-Quiz files are generated only when the user explicitly asks (by name or `/leetcode-quiz`) OR pastes a LeetCode-style problem description to be processed. Do not auto-generate otherwise, and ask first if a paste is ambiguous. See the repo `CLAUDE.md` "Skill & Auto-Generation Gate" section for the authoritative rule.
+Two flows, decided by the trigger:
+
+1. **Skill (`leetcode-quiz`) — concrete description handed in.** Use when the user pastes (or invokes `/leetcode-quiz` with) a specific problem description. Transform that description into a quiz file. Ask first if a paste is ambiguous.
+
+2. **Default — next quiz from the queue.** When the user wants to practice but hasn't handed in a specific problem (cues: "next", "what's next", "quiz me", "let's do a problem"), generate the next undone problem's scaffold: docstring with number/title/URL/Problem/constraints, an empty function named after the problem, a `__main__` block with test cases from the problem, **no solution or hints**.
+
+### Picking the next undone problem
+
+1. Read [QUEUE.md](QUEUE.md) top-to-bottom (ordered roadmap).
+2. For each row, take the LC number (column 2), zero-pad to 4 digits, and check whether `{number}_*.py` exists anywhere under `algorithms/` or `data-structures/`, and whether the problem appears in [PROGRESS.md](PROGRESS.md) solve history.
+3. **Next quiz = the first queue row that is neither solved nor already has a file.**
+4. If the immediate next problem already has a file but isn't solved yet, **point the user to that existing file** rather than skipping ahead or creating a duplicate. Only generate a new file for a problem that has no file yet.
+
+See the repo `CLAUDE.md` "Skill & Auto-Generation Gate" section for the authoritative rule.
 
 **Template structure:**
 - Docstring with problem metadata (number, title, URL, description)
@@ -75,6 +88,8 @@ def solve(nums: list[int], target: int) -> list[int]:
 This removes setup friction and lets you focus on solving.
 
 ## Claude's Role: Quiz Workflow
+
+**Default entry point:** when the user wants to practice without naming or pasting a specific problem, generate the next quiz from the queue (see "Generating Quiz Files" above). Whether the quiz came from the queue or from a pasted description, the flow below is the same.
 
 **Strict problem-first approach:**
 

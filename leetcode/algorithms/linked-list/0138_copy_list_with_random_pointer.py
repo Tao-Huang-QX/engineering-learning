@@ -69,8 +69,7 @@ def copy_random_list(head: "Node | None") -> "Node | None":
         curr = curr.next.next  # type: ignore # skip the clone
 
     # Phase 3 - detach: split the interleaved list back into two.
-    dummy = Node(0)
-    tail = dummy
+    dummy = tail = Node(0)
     curr = head
     while curr:
         clone = curr.next
