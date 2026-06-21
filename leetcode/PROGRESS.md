@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-06-07
-Completed: 50/120 (41.7%)
+Completed: 52/120 (43.3%)
 
 ## Solve History
 
@@ -47,6 +47,7 @@ Completed: 50/120 (41.7%)
 # solved: 2026-06-06, medium, 40min, Find All Anagrams in A String
 # solved: 2026-06-06, medium, 30min, Search in Rotated Sorted Array II
 # solved: 2026-06-07, medium, 45min, Find Minimum in Rotated Sorted Array
+# solved: 2026-06-21, medium, 20min, Find Peak Element
 # solved: 2026-06-07, medium, 60min, Remove Duplicates from Sorted List II
 # solved: 2026-06-07, medium, 30min, Partition List
 # solved: 2026-06-16, medium, 60min, Reorder List
@@ -56,4 +57,5 @@ Completed: 50/120 (41.7%)
 # solved: 2026-06-19, medium, 60min, Rotate List
 # solved: 2026-06-20, medium, 60min, Copy List with Random Pointer
 # solved: 2026-06-20, easy, 60min, Binary Tree Inorder Traversal
+# solved: 2026-06-21, medium, 40min, Validate Binary Search Tree
 ```
