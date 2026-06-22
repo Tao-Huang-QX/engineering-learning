@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-06-07
-Completed: 52/120 (43.3%)
+Completed: 54/120 (45.0%)
 
 ## Solve History
 
@@ -58,4 +58,6 @@ Completed: 52/120 (43.3%)
 # solved: 2026-06-20, medium, 60min, Copy List with Random Pointer
 # solved: 2026-06-20, easy, 60min, Binary Tree Inorder Traversal
 # solved: 2026-06-21, medium, 40min, Validate Binary Search Tree
+# solved: 2026-06-22, easy, 20min, Same Tree
+# solved: 2026-06-22, easy, 60min, Symmetric Tree
 ```
