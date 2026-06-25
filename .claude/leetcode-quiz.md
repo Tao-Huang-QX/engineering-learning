@@ -69,7 +69,7 @@ Approach: Simulation
 Time: O(M * N)   Space: O(N)
 """
 
-def solve(n: int, current_state: list[int], days: int) -> list[int]:
+def street_lights_state(n: int, current_state: list[int], days: int) -> list[int]:
     pass
 
 if __name__ == "__main__":
@@ -99,7 +99,7 @@ Approach: Graph traversal
 Time: O(N * (V + E))   Space: O(V + E)
 """
 
-def solve(users: int, edges: list[tuple[int, int]]) -> int:
+def social_network_promo(users: int, edges: list[tuple[int, int]]) -> int:
     pass
 
 if __name__ == "__main__":
