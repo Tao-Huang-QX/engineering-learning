@@ -50,7 +50,7 @@ def build_tree(preorder: list[int], inorder: list[int]) -> TreeNode | None:
         return None
     root = TreeNode(preorder[0])
     idx = inorder.index(preorder[0])
-    root.left = build_tree(preorder[1:idx + 1], inorder[:idx + 1])
+    root.left = build_tree(preorder[1:idx + 1], inorder[:idx])
     root.right = build_tree(preorder[idx + 1:], inorder[idx + 1:])
     return root
     """

@@ -85,6 +85,27 @@ Time: O(...)   Space: O(...)
 
 - Branch: `feature/<thing>`, `fix/<thing>`, `learn/<topic>`
 - Commits: imperative mood, present tense ("add two-pointer solution for 3Sum")
+- Commit message format (Conventional Commits / Angular style):
+
+```
+[type]: [subject]
+
+[bullet points for changes]
+
+Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+```
+
+Example:
+```
+Add Subtree of Another Tree solution, update progress
+
+- Add 0572_subtree_of_another_tree.py with iterative DFS approach
+- Fix slice boundaries in 0105 preorder construction (left subtree)
+- Update PROGRESS.md with solved entry (57/120 completed)
+
+Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+```
+
 - No large generated files, no secrets, no virtualenvs/node_modules
 
 ## Claude's Role
