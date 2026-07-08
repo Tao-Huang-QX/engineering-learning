@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-06-07
-Completed: 57/120 (47.5%)
+Last updated: 2026-07-08
+Completed: 58/120 (48.3%)
 
 ## Solve History
 
@@ -63,4 +63,5 @@ Completed: 57/120 (47.5%)
 # solved: 2026-06-23, medium, 60min, Construct from Preorder and Inorder
 # solved: 2026-06-24, medium, 60min, Construct from Inorder and Postorder
 # solved: 2026-06-27, easy, 30min, Subtree of Another Tree
+# solved: 2026-07-08, medium, 30min, Course Schedule II
 ```
