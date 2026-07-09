@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-07-08
-Completed: 58/120 (48.3%)
+Last updated: 2026-07-09
+Completed: 59/120 (49.2%)
 
 ## Solve History
 
@@ -64,4 +64,5 @@ Completed: 58/120 (48.3%)
 # solved: 2026-06-24, medium, 60min, Construct from Inorder and Postorder
 # solved: 2026-06-27, easy, 30min, Subtree of Another Tree
 # solved: 2026-07-08, medium, 30min, Course Schedule II
+# solved: 2026-07-09, medium, 120min, Rotting Oranges
 ```
