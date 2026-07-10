@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-07-09
-Completed: 59/120 (49.2%)
+Last updated: 2026-07-10
+Completed: 61/120 (50.8%)
 
 ## Solve History
 
@@ -65,4 +65,6 @@ Completed: 59/120 (49.2%)
 # solved: 2026-06-27, easy, 30min, Subtree of Another Tree
 # solved: 2026-07-08, medium, 30min, Course Schedule II
 # solved: 2026-07-09, medium, 120min, Rotting Oranges
+# solved: 2026-07-10, medium, 30min, Jump Game III
+# solved: 2026-07-10, medium, 30min, Minimum Path Sum
 ```
