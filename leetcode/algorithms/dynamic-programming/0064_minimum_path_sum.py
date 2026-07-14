@@ -32,15 +32,11 @@ def min_path_sum(grid: list[list[int]]) -> int:
         Minimum sum of numbers along a path moving only down or right
     """
     row, col = len(grid), len(grid[0])
-    accumulation = 0
-    for r in range(0, row):
-        accumulation += grid[r][0]
-        grid[r][0] = accumulation
+    for r in range(1, row):
+        grid[r][0] += grid[r - 1][0]
 
-    accumulation = 0
-    for c in range(0, col):
-        accumulation += grid[0][c]
-        grid[0][c] = accumulation
+    for c in range(1, col):
+        grid[0][c] += grid[0][c - 1]
 
     for r in range(1, row):
         for c in range(1, col):

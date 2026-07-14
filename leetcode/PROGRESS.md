@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-07-10
-Completed: 64/120 (53.3%)
+Completed: 66/120 (55.0%)
 
 ## Solve History
 
@@ -70,4 +70,6 @@ Completed: 64/120 (53.3%)
 # solved: 2026-07-11, medium, 20min, Unique Paths
 # solved: 2026-07-11, medium, 30min, Longest Common Subsequence
 # solved: 2026-07-12, medium, 40min, Longest Palindromic Substring
+# solved: 2026-07-14, medium, 45min, Edit Distance
+# solved: 2026-07-14, medium, 45min, Jump Game
 ```
