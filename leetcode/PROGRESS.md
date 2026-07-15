@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-07-10
-Completed: 66/120 (55.0%)
+Completed: 68/120 (56.7%)
 
 ## Solve History
 
@@ -72,4 +72,6 @@ Completed: 66/120 (55.0%)
 # solved: 2026-07-12, medium, 40min, Longest Palindromic Substring
 # solved: 2026-07-14, medium, 45min, Edit Distance
 # solved: 2026-07-14, medium, 45min, Jump Game
+# solved: 2026-07-15, medium, 60min, Jump Game II
+# solved: 2026-07-15, medium, 30min, Best Time to Buy and Sell Stock II
 ```
