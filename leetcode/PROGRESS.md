@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-07-10
-Completed: 68/120 (56.7%)
+Completed: 70/120 (58.3%)
 
 ## Solve History
 
@@ -74,4 +74,6 @@ Completed: 68/120 (56.7%)
 # solved: 2026-07-14, medium, 45min, Jump Game
 # solved: 2026-07-15, medium, 60min, Jump Game II
 # solved: 2026-07-15, medium, 30min, Best Time to Buy and Sell Stock II
+# solved: 2026-07-16, medium, 60min, Queue Reconstruction by Height
+# solved: 2026-07-16, medium, 40min, Permutations
 ```
