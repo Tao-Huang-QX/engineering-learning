@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-07-10
-Completed: 70/120 (58.3%)
+Last updated: 2026-07-17
+Completed: 72/120 (60.0%)
 
 ## Solve History
 
@@ -76,4 +76,6 @@ Completed: 70/120 (58.3%)
 # solved: 2026-07-15, medium, 30min, Best Time to Buy and Sell Stock II
 # solved: 2026-07-16, medium, 60min, Queue Reconstruction by Height
 # solved: 2026-07-16, medium, 40min, Permutations
+# solved: 2026-07-17, medium, 30min, Subsets
+# solved: 2026-07-17, medium, 50min, Combination Sum
 ```
