@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-07-17
-Completed: 72/120 (60.0%)
+Last updated: 2026-07-18
+Completed: 74/120 (61.7%)
 
 ## Solve History
 
@@ -78,4 +78,6 @@ Completed: 72/120 (60.0%)
 # solved: 2026-07-16, medium, 40min, Permutations
 # solved: 2026-07-17, medium, 30min, Subsets
 # solved: 2026-07-17, medium, 50min, Combination Sum
+# solved: 2026-07-18, medium, 35min, Implement Trie (Prefix Tree)
+# solved: 2026-07-18, medium, 30min, Design Add and Search Words
 ```
