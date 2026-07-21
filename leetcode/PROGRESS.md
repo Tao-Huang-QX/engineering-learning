@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-07-20
-Completed: 76/120 (63.3%)
+Last updated: 2026-07-21
+Completed: 78/120 (65.0%)
 
 ## Solve History
 
@@ -82,4 +82,6 @@ Completed: 76/120 (63.3%)
 # solved: 2026-07-18, medium, 30min, Design Add and Search Words
 # solved: 2026-07-20, easy, 30min, Reverse Bits
 # solved: 2026-07-20, easy, 30min, Number of 1 Bits
+# solved: 2026-07-21, easy, 30min, Power of Two
+# solved: 2026-07-21, easy, 30min, Binary Tree Postoder Traversal
 ```
