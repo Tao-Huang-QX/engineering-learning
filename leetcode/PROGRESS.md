@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-07-21
-Completed: 78/120 (65.0%)
+Last updated: 2026-07-23
+Completed: 80/120 (66.7%)
 
 ## Solve History
 
@@ -84,4 +84,6 @@ Completed: 78/120 (65.0%)
 # solved: 2026-07-20, easy, 30min, Number of 1 Bits
 # solved: 2026-07-21, easy, 30min, Power of Two
 # solved: 2026-07-21, easy, 30min, Binary Tree Postoder Traversal
+# solved: 2026-07-23, medium, 90min, Delete Node in a BST
+# solved: 2026-07-23, medium, 30min, Insert into a BST
 ```
