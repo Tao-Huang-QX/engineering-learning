@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-07-23
-Completed: 80/120 (66.7%)
+Last updated: 2026-07-24
+Completed: 81/120 (67.5%)
 
 ## Solve History
 
@@ -86,4 +86,5 @@ Completed: 80/120 (66.7%)
 # solved: 2026-07-21, easy, 30min, Binary Tree Postoder Traversal
 # solved: 2026-07-23, medium, 90min, Delete Node in a BST
 # solved: 2026-07-23, medium, 30min, Insert into a BST
+# solved: 2026-07-24, medium, 15min, Lowest Common Ancestor if BST
 ```
