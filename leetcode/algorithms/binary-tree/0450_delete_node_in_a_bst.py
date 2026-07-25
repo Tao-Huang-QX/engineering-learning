@@ -51,7 +51,7 @@ def delete_node(root: TreeNode | None, key: int) -> TreeNode | None:
         The root of the modified BST
     """
     """
-    def dfs(node: TreeNode, key: int):
+    def dfs(node: TreeNode, key: int) -> None:
         if not node:
             return None
         # Search

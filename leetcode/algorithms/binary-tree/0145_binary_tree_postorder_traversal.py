@@ -44,7 +44,7 @@ def postorder_traversal(root: TreeNode | None) -> list[int]:
     """
     """
     result =[]
-    def dfs(node: TreeNode):
+    def dfs(node: TreeNode) -> None:
         if not node:
             return
         dfs(node.left)

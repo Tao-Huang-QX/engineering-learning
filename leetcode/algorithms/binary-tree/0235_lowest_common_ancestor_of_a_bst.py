@@ -38,7 +38,7 @@ class TreeNode:
         self.right = right
 
 
-def lowest_common_ancestor(root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:
+def lowest_common_ancestor(root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode:  # pyright: ignore[reportReturnType]
     """
     Find the lowest common ancestor of two nodes in a BST.
 

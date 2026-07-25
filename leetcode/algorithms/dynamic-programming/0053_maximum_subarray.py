@@ -25,7 +25,7 @@ def max_sub_array(nums: list[int]) -> int:
     """
     Devide and conquer approach:
     Time: O(n log n) Space; O(log n)
-    def max_sub_array(nums, left, right):
+    def max_sub_array(nums, left, right) -> None:
         if left == right:
             return nums[left]
         mid = (left + right) // 2

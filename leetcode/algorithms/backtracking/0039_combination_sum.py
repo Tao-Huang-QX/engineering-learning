@@ -46,7 +46,7 @@ def combination_sum(candidates: list[int], target: int) -> list[list[int]]:
     """
     ans = []
 
-    def backtrack(start: int, remaining: int, sol: list[int]):
+    def backtrack(start: int, remaining: int, sol: list[int]) -> None:
         if remaining == 0:
             ans.append(sol.copy())
             return

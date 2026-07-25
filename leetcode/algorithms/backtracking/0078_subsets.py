@@ -38,7 +38,7 @@ def subsets(nums: list[int]) -> list[list[int]]:
     """
     ans = []
 
-    def backtrack(start: int, sol: list[int]):
+    def backtrack(start: int, sol: list[int]) -> None:
         ans.append(sol.copy())
 
         for i in range(start, len(nums)):

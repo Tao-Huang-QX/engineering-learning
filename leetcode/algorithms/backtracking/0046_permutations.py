@@ -45,7 +45,7 @@ def permute(nums: list[int]) -> list[list[int]]:
     ans = []
     used = [False] * len(nums)
 
-    def backtrack(sol: list[int]):
+    def backtrack(sol: list[int]) -> None:
         # Base case: path is complete when it has all elements
         if len(sol) == len(nums):
             ans.append(sol.copy())
