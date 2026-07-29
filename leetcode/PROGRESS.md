@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-07-27
-Completed: 86/120 (71.7%)
+Completed: 88/120 (73.3%)
 
 ## Solve History
 
@@ -90,6 +90,8 @@ Completed: 86/120 (71.7%)
 # solved: 2026-07-25, medium, 45min, Number of Connected Components
 # solved: 2026-07-27, medium, 30min, Unique Paths II
 # solved: 2026-07-27, medium, 30min, Interleaving String
-# solved: 2026-07-28, medium, 45min, Longest Increasing Subsequence
+# solved: 2026-07-28, medium, 45imin, Longest Increasing Subsequence
 # solved: 2026-07-28, medium, 60min, Best Time with Cooldown
+# solved: 2026-07-29, medium, 50min, Best Time to Buy and Sell Stock III
+# solved: 2026-07-29, medium, 30min, Permutations II
 ```
