@@ -24,19 +24,21 @@ def find_min(nums: list[int]) -> int:
         The minimum element
     """
     left, right = 0, len(nums) - 1
-    mid = 0
 
     while left <= right:
         mid = (left + right) // 2
 
-        if nums[left] == nums[right]:
-            left += 1
-            right -= 1
-        elif nums[left] > nums[right]:
+        if nums[mid] > nums[right]:
+            # Pivot is in right half, mid itself can't be the minimum
             left = mid + 1
+        elif nums[mid] < nums[right]:
+            # Right half is sorted, minimum is at mid or in left half
+            right = mid
         else:
-            return nums[left]
-    return nums[mid]
+            # Can't tell which half, shrink right
+            right -= 1
+
+    return nums[left]
 
 
 if __name__ == "__main__":

@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-07-27
-Completed: 88/120 (73.3%)
+Last updated: 2026-07-30
+Completed: 90/120 (75.0%)
 
 ## Solve History
 
@@ -94,4 +94,6 @@ Completed: 88/120 (73.3%)
 # solved: 2026-07-28, medium, 60min, Best Time with Cooldown
 # solved: 2026-07-29, medium, 50min, Best Time to Buy and Sell Stock III
 # solved: 2026-07-29, medium, 30min, Permutations II
+# solved: 2026-07-30, medium, 45min, Subset II
+# solved: 2026-07-30, medium, 30min, Combination Sum II
 ```
