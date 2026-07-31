@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-07-30
-Completed: 90/120 (75.0%)
+Last updated: 2026-07-31
+Completed: 91/120 (75.8%)
 
 ## Solve History
 
@@ -96,4 +96,5 @@ Completed: 90/120 (75.0%)
 # solved: 2026-07-29, medium, 30min, Permutations II
 # solved: 2026-07-30, medium, 45min, Subset II
 # solved: 2026-07-30, medium, 30min, Combination Sum II
+# solved: 2026-07-31, hard, 60min, Data Stream as Disjoint Intervals
 ```
