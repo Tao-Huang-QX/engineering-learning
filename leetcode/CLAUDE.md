@@ -70,7 +70,7 @@ Two flows, decided by the trigger:
 3. **Next quiz = the first queue row that is neither solved nor already has a file.**
 4. If the immediate next problem already has a file but isn't solved yet, **point the user to that existing file** rather than skipping ahead or creating a duplicate. Only generate a new file for a problem that has no file yet.
 
-See the repo `CLAUDE.md` "Skill & Auto-Generation Gate" section for the authoritative rule.
+See the repo `CLAUDE.md` "Quiz Generation (LeetCode)" section for the authoritative gate.
 
 **Template structure:**
 - Docstring with problem metadata (number, title, URL, description)
@@ -130,6 +130,24 @@ Time: O(...)   Space: O(...)
 
 Include a `__main__` block with test cases or use the standard test runner from `templates/python/`.
 
+Every function and method follows this docstring format:
+
+```python
+def function_name(...) -> ...:
+    """
+    {One-line summary.}
+
+    Args:
+        param_name: Type and description
+        ...
+
+    Returns:
+        Return type and description
+    """
+```
+
+Include `Args: None` and `Returns:` even when there are no parameters — be consistent.
+
 ## Review Checklist
 
 - [ ] Edge cases covered (empty input, single element, duplicates, extremes)
@@ -147,3 +165,10 @@ After solving, add a one-line entry at the bottom of the solution file:
 ```
 
 Update [PROGRESS.md](PROGRESS.md) with the completion.
+
+## Workflow Recipe
+
+### "Let's solve a LeetCode problem"
+1. Pick a problem (or Claude suggests one matching a pattern you're weak on)
+2. You attempt it, write code in `leetcode/algorithms/<pattern>/` or `leetcode/data-structures/<structure>/`
+3. Claude reviews against the template and review criteria

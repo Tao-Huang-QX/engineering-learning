@@ -13,7 +13,15 @@ Time: O(...)   Space: O(...)
 
 
 def solve(*args, **kwargs):
-    """Solution implementation."""
+    """
+    {One-line summary.}
+
+    Args:
+        {param}: {description}
+
+    Returns:
+        {description}
+    """
     pass
 
 

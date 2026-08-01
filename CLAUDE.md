@@ -42,29 +42,26 @@ Adding new languages or domains: update this file, add a domain-level CLAUDE.md,
 
 ## Conventions
 
-### LeetCode
+### Python (all domains)
 
-- File naming: `{problem_number}_{slug}.py` (e.g., `0001_two_sum.py`)
-- Every solution follows this template structure:
+- Every function docstring follows this format:
 
 ```python
 """
-LeetCode {number}: {title}
-https://leetcode.com/problems/{slug}/
+{One-line summary.}
 
-Problem: {one-line description}
+Args:
+    param_name: Type and description
+    ...
 
-Approach: {technique name}
-- {key insight 1}
-- {key insight 2}
-
-Time: O(...)   Space: O(...)
+Returns:
+    Return type and description
 """
 ```
 
-- Place solutions in the appropriate algorithm/ or data-structures/ subdirectory
-- Include complexity analysis in the docstring — never skip it
-- Solutions should be self-contained with inline tests or a `__main__` block
+- Include `Args: None` and `Returns:` even when there are no parameters — be consistent
+- Modules should be self-contained with inline tests or a `__main__` block
+- Ruff for linting and formatting (`ruff check .` / `ruff format .`); config in `pyproject.toml`
 
 ### Full-Stack
 
@@ -92,7 +89,7 @@ Time: O(...)   Space: O(...)
 
 [bullet points for changes]
 
-Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+Co-Authored-By: Claude <noreply@anthropic.com>
 ```
 
 Example:
@@ -103,10 +100,15 @@ Add Subtree of Another Tree solution, update progress
 - Fix slice boundaries in 0105 preorder construction (left subtree)
 - Update PROGRESS.md with solved entry (57/120 completed)
 
-Co-Authored-By: Claude Opus 4.8 (1M context) <noreply@anthropic.com>
+Co-Authored-By: Claude <noreply@anthropic.com>
 ```
 
 - No large generated files, no secrets, no virtualenvs/node_modules
+
+### Domain-Specific Conventions
+
+- **LeetCode:** see [leetcode/CLAUDE.md](leetcode/CLAUDE.md) for problem template, quiz workflow, review checklist, and placement rules
+- **Full-Stack / Data Engineering:** conventions above; add a domain CLAUDE.md when the sub-project grows
 
 ## Claude's Role
 
@@ -138,22 +140,16 @@ When asked to explain, Claude:
 - Explains the WHY, not just the WHAT
 - Uses concrete examples from the codebase
 
-### Skill & Auto-Generation Gate
+### Quiz Generation (LeetCode)
 
-Two flows; the trigger decides which runs:
-
-1. **Skill (`leetcode-quiz`) — requires a concrete problem description handed in.** The skill engages ONLY when the user provides a specific problem description — either pasted, or `/leetcode-quiz` invoked together with a description. It transforms that exact description into a quiz file. If a paste is ambiguous (not clearly a problem to process), ask before generating. The skill never fires on its own.
-
-2. **Default practice flow — generate the next quiz from the queue.** When the user wants to practice but has NOT handed in a specific problem (cues: "next", "what's next", "quiz me", "let's do a problem", "give me the next one"), read [leetcode/QUEUE.md](leetcode/QUEUE.md) + [leetcode/PROGRESS.md](leetcode/PROGRESS.md), determine the next undone problem, and write its scaffold: docstring with number/title/URL/Problem/constraints, an empty function named after the problem, a `__main__` block with test cases from the problem, and **no solution or hints**. See `leetcode/CLAUDE.md` for the "next undone" rule.
-
-`leetcode/CLAUDE.md` carries the quiz-specific workflow; this section is the authoritative gate.
+Two flows; see [leetcode/CLAUDE.md](leetcode/CLAUDE.md) for the full workflow:
+1. **Skill (`leetcode-quiz`)** — when the user hands in a specific problem description
+2. **Default** — generate the next quiz from the queue (cues: "next", "quiz me", etc.)
 
 ## Workflow Recipes
 
 ### "Let's solve a LeetCode problem"
-1. Pick a problem (or Claude suggests one matching a pattern you're weak on)
-2. You attempt it, write code in `leetcode/algorithms/<pattern>/` or `leetcode/data-structures/<structure>/`
-3. Claude reviews against the template and review criteria
+See [leetcode/CLAUDE.md](leetcode/CLAUDE.md) for the complete quiz workflow.
 
 ### "Let's build a full-stack feature"
 1. Define the feature and scope
