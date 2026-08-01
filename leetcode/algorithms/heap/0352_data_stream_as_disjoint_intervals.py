@@ -7,39 +7,39 @@ summarize the numbers seen so far as a list of disjoint intervals.
 
 Implement the SummaryRanges class:
 - SummaryRanges() Initializes the object with an empty stream.
-- void addNum(int value) Adds the integer value to the stream.
-- int[][] getIntervals() Returns a summary of the integers in the stream
+- void add_num(int value) Adds the integer value to the stream.
+- int[][] get_intervals() Returns a summary of the integers in the stream
   currently as a list of disjoint intervals [start_i, end_i].
   The answer should be sorted by start_i.
 
 Constraints:
 - 0 <= value <= 10^4
-- At most 3 * 10^4 calls will be made to addNum and getIntervals.
-- At most 10^2 calls will be made to getIntervals.
+- At most 3 * 10^4 calls will be made to add_num and get_intervals.
+- At most 10^2 calls will be made to get_intervals.
 
 Follow up: What if there are lots of merges and the number of disjoint
 intervals is small compared to the data stream's size?
 
 Examples:
 - Input:
-    ["SummaryRanges", "addNum", "getIntervals", "addNum", "getIntervals",
-     "addNum", "getIntervals", "addNum", "getIntervals", "addNum", "getIntervals"]
+    ["SummaryRanges", "add_num", "get_intervals", "add_num", "get_intervals",
+     "add_num", "get_intervals", "add_num", "get_intervals", "add_num", "get_intervals"]
     [[], [1], [], [3], [], [7], [], [2], [], [6], []]
   Output:
     [null, null, [[1, 1]], null, [[1, 1], [3, 3]], null, [[1, 1], [3, 3], [7, 7]],
      null, [[1, 3], [7, 7]], null, [[1, 3], [6, 7]]]
 
-Approach: Min-heap with lazy dedup + on-demand interval merge
-- addNum: push (value, value) as 1-length interval to min-heap; use seen set
+Approach: Min-heap with seen-set dedup + on-demand interval merge
+- add_num: push (value, value) as 1-length interval to min-heap; use seen set
   for O(1) dedup — O(log n) per call
-- getIntervals: drain all intervals from heap, merge overlapping/adjacent
+- get_intervals: drain all intervals from heap, merge overlapping/adjacent
   intervals (if start <= last_end + 1, extend; else start new), push merged
   intervals back — O(n log n) per call
 - "Lots of merges, few intervals" follow-up: store intervals directly in heap
   rather than individual values — space is O(num_intervals) not O(num_values)
-- Lazy evaluation: getIntervals is called rarely (≤100) vs addNum (≤30k)
+- Lazy evaluation: get_intervals is called rarely (≤100) vs add_num (≤30k)
 
-Time: addNum O(log n), getIntervals O(n log n) where n = unique intervals
+Time: add_num O(log n), get_intervals O(n log n) where n = unique intervals
 Space: O(k) where k = number of disjoint intervals
 """
 
@@ -49,7 +49,7 @@ import heapq
 class SummaryRanges:
     def __init__(self) -> None:
         self.heap = []  # min-heap of values + interval endpoints
-        self.seen: set[int] = set()  # active values in heap (dedup + lazy delete)
+        self.seen: set[int] = set()  # active values in heap
 
     def add_num(self, value: int) -> None:
         # Push value to the heap; skip if already tracked.
@@ -76,7 +76,7 @@ class SummaryRanges:
             else:
                 intervals.append([val, val])  # start new interval
 
-        # 3. Push only endpoints back - future addNum's land between them
+        # 3. Push only endpoints back - future add_num's land between them
         for start, end in intervals:
             for v in range(start, end + 1):
                 heapq.heappush(self.heap, v)
@@ -149,17 +149,17 @@ if __name__ == "__main__":
     # Example from problem statement
     sr = SummaryRanges()
     sr.add_num(1)
-    assert sr.get_intervals() == [[1, 1]], f"After addNum(1): got {sr.get_intervals()}"
+    assert sr.get_intervals() == [[1, 1]], f"After add_num(1): got {sr.get_intervals()}"
     sr.add_num(3)
-    assert sr.get_intervals() == [[1, 1], [3, 3]], f"After addNum(3): got {sr.get_intervals()}"
+    assert sr.get_intervals() == [[1, 1], [3, 3]], f"After add_num(3): got {sr.get_intervals()}"
     sr.add_num(7)
     assert sr.get_intervals() == [[1, 1], [3, 3], [7, 7]], (
-        f"After addNum(7): got {sr.get_intervals()}"
+        f"After add_num(7): got {sr.get_intervals()}"
     )
     sr.add_num(2)
-    assert sr.get_intervals() == [[1, 3], [7, 7]], f"After addNum(2): got {sr.get_intervals()}"
+    assert sr.get_intervals() == [[1, 3], [7, 7]], f"After add_num(2): got {sr.get_intervals()}"
     sr.add_num(6)
-    assert sr.get_intervals() == [[1, 3], [6, 7]], f"After addNum(6): got {sr.get_intervals()}"
+    assert sr.get_intervals() == [[1, 3], [6, 7]], f"After add_num(6): got {sr.get_intervals()}"
 
     # Edge: empty stream
     sr2 = SummaryRanges()
