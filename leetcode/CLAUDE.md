@@ -105,9 +105,12 @@ This removes setup friction and lets you focus on solving.
 
 ## Directory Placement
 
-- Technique-based problems → `algorithms/<technique>/`
-- Data structure implementations → `data-structures/<structure>/`
-- If a problem fits multiple categories, pick the primary technique and add a cross-reference comment at the top
+- **Algorithm / technique problems** → `algorithms/<technique>/`
+  (e.g., backtracking, binary-search, sliding-window, two-pointers, dynamic-programming, greedy)
+- **Data structure problems** → `data-structures/<structure>/`
+  (e.g., array, binary-tree, graph, hash-map, heap, linked-list, stack, string, trie)
+- If a problem fits multiple categories, pick the primary one and add a cross-reference comment at the top
+- Use **singular** names for both technique and structure directories
 
 ## Solution Template
 
