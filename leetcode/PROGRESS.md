@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-07-31
-Completed: 93/120 (77.5%)
+Last updated: 2026-08-03
+Completed: 95/120 (79.2%)
 
 ## Solve History
 
@@ -99,4 +99,6 @@ Completed: 93/120 (77.5%)
 # solved: 2026-07-31, hard, 60min, Data Stream as Disjoint Intervals
 # solved: 2026-08-01, hard, 90min, Sliding Window Median
 # solved: 2026-08-02, hard, 60min, Word Search II
+# solved: 2026-08-03, medium, 15min, Bitwise AND of Numbers Range
+# solved: 2026-08-03, hard, min, Shortest Path Visiting All Nodes
 ```
