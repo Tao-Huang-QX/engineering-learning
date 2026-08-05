@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-08-03
-Completed: 97/120 (80.8%)
+Last updated: 2026-08-05
+Completed: 100/120 (83.3%)
 
 ## Solve History
 
@@ -103,4 +103,7 @@ Completed: 97/120 (80.8%)
 # solved: 2026-08-03, hard, 60min, Shortest Path Visiting All Nodes
 # solved: 2026-08-04, hard, 30min, Merge K Sorted List
 # solved: 2026-08-04, medium, 20min, Longest Consecutive Sequence
+# solved: 2026-08-05, medium, 30min, Evaluate Reverse Polish Notation
+# solved: 2026-08-05, medium, 15min, Merge Intervals
+# solved: 2026-08-05, hard, 45min, Sliding Window Maximum
 ```
