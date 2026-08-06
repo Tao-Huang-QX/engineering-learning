@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-08-05
-Completed: 100/120 (83.3%)
+Last updated: 2026-08-06
+Completed: 102/120 (85.0%)
 
 ## Solve History
 
@@ -106,4 +106,6 @@ Completed: 100/120 (83.3%)
 # solved: 2026-08-05, medium, 30min, Evaluate Reverse Polish Notation
 # solved: 2026-08-05, medium, 15min, Merge Intervals
 # solved: 2026-08-05, hard, 45min, Sliding Window Maximum
+# solved: 2026-08-06, medium, 30min, Partition Equal Subset Sum
+# solved: 2026-08-06, medium, 30min, Target Sum
 ```
