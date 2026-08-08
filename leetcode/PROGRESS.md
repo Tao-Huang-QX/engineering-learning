@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-08-07
-Completed: 105/120 (87.5%)
+Last updated: 2026-08-08
+Completed: 106/120 (88.3%)
 
 ## Solve History
 
@@ -111,4 +111,5 @@ Completed: 105/120 (87.5%)
 # solved: 2026-08-07, medium, 45min, Flatten Binary Tree into Linked List
 # solved: 2026-08-07, hard, 45min, Binary Tree Maximum Path Sum
 # solved: 2026-08-07, medium, 30min, BST Iterator
+# solved: 2026-08-08, easy, 30min, Convert Sorted Array to BST
 ```

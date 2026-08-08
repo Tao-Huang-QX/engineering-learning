@@ -111,7 +111,7 @@ Work through in order. Check off as completed.
 | 103 | 114 | [Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/) | M | Tree recursion |
 | 104 | 124 | [Binary Tree Maximum Path Sum](https://leetcode.com/problems/binary-tree-maximum-path-sum/) | H | Tree DFS + global max |
 | 105 | 173 | [BST Iterator](https://leetcode.com/problems/bst-iterator/) | M | Controlled recursion |
-| 106 | 235 | [Lowest Common Ancestor of BST](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/) | M | BST traversal |
+| 106 | 108 | [Convert Sorted Array to BST](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/) | E | Divide & conquer |
 | 107 | 1011 | [Capacity To Ship Packages Within D Days](https://leetcode.com/problems/capacity-to-ship-packages-within-d-days/) | M | Binary search on answer |
 | 108 | 692 | [Top K Frequent Words](https://leetcode.com/problems/top-k-frequent-words/) | H | Heap + custom comparator |
 | 109 | 332 | [Reconstruct Itinerary](https://leetcode.com/problems/reconstruct-itinerary/) | H | Eulerian path / DFS |
