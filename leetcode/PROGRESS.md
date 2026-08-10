@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-08-09
-Completed: 107/120 (89.2%)
+Completed: 108/120 (90.0%)
 
 ## Solve History
 
@@ -112,5 +112,6 @@ Completed: 107/120 (89.2%)
 # solved: 2026-08-07, hard, 45min, Binary Tree Maximum Path Sum
 # solved: 2026-08-07, medium, 30min, BST Iterator
 # solved: 2026-08-08, easy, 30min, Convert Sorted Array to BST
-# solved: 2026-08-09, medium, min, Capacity to Ship Package within D Days
+# solved: 2026-08-09, medium, 30min, Capacity to Ship Package within D Days
+# solved: 2026-08-10, hard, 60min, Top K Frequent Words
 ```
