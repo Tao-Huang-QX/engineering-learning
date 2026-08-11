@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-08-09
-Completed: 108/120 (90.0%)
+Last updated: 2026-08-11
+Completed: 110/120 (91.7%)
 
 ## Solve History
 
@@ -114,4 +114,6 @@ Completed: 108/120 (90.0%)
 # solved: 2026-08-08, easy, 30min, Convert Sorted Array to BST
 # solved: 2026-08-09, medium, 30min, Capacity to Ship Package within D Days
 # solved: 2026-08-10, hard, 60min, Top K Frequent Words
+# solved: 2026-08-11, hard, 60min, Reconstruct Itinerary
+# solved: 2026-08-11, hard, 60min, Word Ladder
 ```
