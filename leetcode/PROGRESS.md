@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-08-11
-Completed: 110/120 (91.7%)
+Last updated: 2026-08-12
+Completed: 112/120 (93.3%)
 
 ## Solve History
 
@@ -116,4 +116,6 @@ Completed: 110/120 (91.7%)
 # solved: 2026-08-10, hard, 60min, Top K Frequent Words
 # solved: 2026-08-11, hard, 60min, Reconstruct Itinerary
 # solved: 2026-08-11, hard, 60min, Word Ladder
+# solved: 2026-08-12, medium, 30min, Word Search
+# solved: 2026-08-12, medium, 20min, Word Break
 ```
