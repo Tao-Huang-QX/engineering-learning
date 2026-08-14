@@ -118,7 +118,7 @@ Work through in order. Check off as completed.
 | 110 | 127 | [Word Ladder](https://leetcode.com/problems/word-ladder/) | H | BFS bidirectional |
 | 111 | 79 | [Word Search](https://leetcode.com/problems/word-search/) | M | DFS + backtracking |
 | 112 | 139 | [Word Break](https://leetcode.com/problems/word-break/) | M | DP on strings |
-| 113 | 140 | [Word Break II](https://leetcode.com/problems/word-break-ii/) | M | DP + backtracking |
+| 113 | 140 | [Word Break II](https://leetcode.com/problems/word-break-ii/) | H | DP + backtracking |
 | 114 | 115 | [Distinct Subsequences](https://leetcode.com/problems/distinct-subsequences/) | M | 2D DP |
 | 115 | 329 | [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | M | DFS + memo |
 | 116 | 394 | [Decode Ways](https://leetcode.com/problems/decode-ways/) | M | 1D DP |
