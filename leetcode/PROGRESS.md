@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-08-14
-Completed: 113/120 (94.2%)
+Completed: 114/120 (95.0%)
 
 ## Solve History
 
@@ -119,4 +119,5 @@ Completed: 113/120 (94.2%)
 # solved: 2026-08-12, medium, 30min, Word Search
 # solved: 2026-08-12, medium, 20min, Word Break
 # solved: 2026-08-14, hard, 60min, Word Break II
+# solved: 2026-08-17, medium, 60min, Distinct Subsequences
 ```
