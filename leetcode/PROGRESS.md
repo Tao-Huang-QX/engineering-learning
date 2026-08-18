@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-08-14
-Completed: 114/120 (95.0%)
+Last updated: 2026-08-18
+Completed: 115/120 (95.8%)
 
 ## Solve History
 
@@ -120,4 +120,5 @@ Completed: 114/120 (95.0%)
 # solved: 2026-08-12, medium, 20min, Word Break
 # solved: 2026-08-14, hard, 60min, Word Break II
 # solved: 2026-08-17, medium, 60min, Distinct Subsequences
+# solved: 2026-08-18, medium, 30min, Longest Increasing Path in a Matrix
 ```
