@@ -35,7 +35,20 @@ Approach: Memoized DFS on suffix
 - For each dictionary word matching the current prefix, prepend to all sentences of the remainder
 - Base case: pos == len(s) returns [""] (empty sentence)
 
-Time: O(n² + output size)   Space: O(n · output size)
+Time: O(n³ + n · output size)   Space: O(n · output size)
+(n = len(s); "output size" = total characters across all returned sentences)
+
+Time — scan: each pos (computed once, memoized) tries every end > pos;
+    slicing + hashing s[pos:end] costs O(end−pos), so Σ(n−pos)² = O(n³).
+    (The loop isn't capped at the max word length ≤ 10 — capping it would tighten this to O(n·L²).)
+Time — build: every stored sentence is built by one word + " " + rest concatenation costing its own length,
+    so build time = total memo chars. Each stored suffix-sentence lies inside a returned sentence
+    (≤ n words each, ≤ n² stored chars per returned sentence) → O(n · output size).
+    Tight: s="a"·n, dict=["a"] → 1 output sentence but Θ(n²) chars built.
+Space: what stays resident is the memo's materialized strings — O(n · output size),
+    same quantity as build cost (Python strings share no structure; every suffix sentence is an independent copy).
+    The n³ of slicing never appears in space because slices are transient (created, hashed, discarded).
+    Recursion depth O(n) and word_set O(dict chars) are dominated.
 """
 
 

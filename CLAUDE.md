@@ -89,7 +89,9 @@ Returns:
 
 [bullet points for changes]
 
-Co-Authored-By: Claude <noreply@anthropic.com>
+Co-Authored-By: <model powering the session>
+(e.g., GLM <noreply@bigmodel.cn> or DeepSeek <noreply@deepseek.com> —
+credit whichever model actually wrote the changes, not a fixed template)
 ```
 
 Example:
@@ -100,7 +102,7 @@ Add Subtree of Another Tree solution, update progress
 - Fix slice boundaries in 0105 preorder construction (left subtree)
 - Update PROGRESS.md with solved entry (57/120 completed)
 
-Co-Authored-By: Claude <noreply@anthropic.com>
+Co-Authored-By: GLM <noreply@bigmodel.cn>
 ```
 
 - No large generated files, no secrets, no virtualenvs/node_modules

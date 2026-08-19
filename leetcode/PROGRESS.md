@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-08-18
-Completed: 115/120 (95.8%)
+Last updated: 2026-08-19
+Completed: 117/120 (97.5%)
 
 ## Solve History
 
@@ -121,4 +121,6 @@ Completed: 115/120 (95.8%)
 # solved: 2026-08-14, hard, 60min, Word Break II
 # solved: 2026-08-17, medium, 60min, Distinct Subsequences
 # solved: 2026-08-18, medium, 30min, Longest Increasing Path in a Matrix
+# solved: 2026-08-19, medium, 50min, Decode Ways
+# solved: 2026-08-19, medium, 35min, Max Area of Islands
 ```
