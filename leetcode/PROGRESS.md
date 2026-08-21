@@ -1,7 +1,7 @@
 # LeetCode Progress
 
-Last updated: 2026-08-20
-Completed: 118/120 (98.3%)
+Last updated: 2026-08-21
+Completed: 120/120 (100%)
 
 ## Solve History
 
@@ -124,4 +124,6 @@ Completed: 118/120 (98.3%)
 # solved: 2026-08-19, medium, 50min, Decode Ways
 # solved: 2026-08-19, medium, 35min, Max Area of Islands
 # solved: 2026-08-20, medium, 90min, Surrounded Regions
+# solved: 2026-08-21, medium, 90min, Remove K Digits
+# solved: 2026-08-21, easy, 15min, Intersection of Two Arrays
 ```

@@ -125,6 +125,6 @@ Work through in order. Check off as completed.
 | 117 | 695 | [Max Area of Island](https://leetcode.com/problems/max-area-of-island/) | M | DFS + flood fill |
 | 118 | 130 | [Surrounded Regions](https://leetcode.com/problems/surrounded-regions/) | M | DFS + flood fill |
 | 119 | 402 | [Remove K Digits](https://leetcode.com/problems/remove-k-digits/) | M | Monotonic stack |
-| 120 | 349 | [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/) | M | HashSet |
+| 120 | 349 | [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/) | E | HashSet |
 
 **Hard problems:** 33, 48, 91, 92, 93, 95, 96, 100, 104, 108, 109, 110 (12 problems)
