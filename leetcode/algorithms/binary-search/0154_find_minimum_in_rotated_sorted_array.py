@@ -4,10 +4,14 @@ https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/
 
 Problem: Given a rotated sorted array with duplicates, find the minimum element.
 
-Approach: Modified binary search
-- When nums[left] == nums[right], can't determine sorted half—shrink by 1 from each end
-- When nums[left] > nums[right], pivot is in right half—search right
-- When nums[left] < nums[right], window is sorted—leftmost is minimum (early exit)
+Approach: Modified binary search (compare mid against right)
+- nums[mid] > nums[right]: minimum lies strictly right of mid — left = mid + 1
+- nums[mid] < nums[right]: right span is sorted, minimum is at mid or left of it — right = mid
+- nums[mid] == nums[right]: duplicate hides which side — drop right by 1
+  (safe: nums[right] is duplicated at mid, so the min value survives the drop)
+- Window closes onto the minimum; loop exits when left meets right
+  (the invariant "min is always in [left..right]" makes the last
+  standing cell the answer)
 
 Time: O(log n) average, O(n) worst (all duplicates)   Space: O(1)
 """
@@ -25,7 +29,7 @@ def find_min(nums: list[int]) -> int:
     """
     left, right = 0, len(nums) - 1
 
-    while left <= right:
+    while left < right:
         mid = (left + right) // 2
 
         if nums[mid] > nums[right]:
