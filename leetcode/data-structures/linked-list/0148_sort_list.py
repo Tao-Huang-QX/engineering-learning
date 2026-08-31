@@ -2,7 +2,24 @@
 LeetCode 148: Sort List
 https://leetcode.com/problems/sort-list/
 
-Problem: Given the head of a linked list, return the list after sorting it in ascending order.
+Problem: Given the head of a linked list, return the list after sorting it in
+ascending order.
+
+Constraints:
+- The number of nodes in the list is in the range [0, 5 * 10^4]
+- -10^5 <= Node.val <= 10^5
+
+Examples:
+- Input: head = [4,2,1,3]
+  Output: [1,2,3,4]
+
+- Input: head = [-1,5,3,4,0]
+  Output: [-1,0,3,4,5]
+
+- Input: head = []
+  Output: []
+
+Follow-up: Can you sort a linked list in O(n log n) time and O(1) memory space?
 
 Approach: Bottom-up iterative merge sort
 - Iteratively merge adjacent sublists of size 1, 2, 4, 8, ... until size ≥ length.
@@ -33,15 +50,12 @@ def sort_list(head: ListNode | None) -> ListNode | None:
     Returns:
         Head of the sorted linked list
     """
-    if not head or not head.next:
-        return head
-
     # Count the length
     length = 0
-    curr = head
-    while curr:
+    cur = head
+    while cur:
         length += 1
-        curr = curr.next
+        cur = cur.next
 
     dummy = ListNode(next=head)
 
@@ -49,14 +63,14 @@ def sort_list(head: ListNode | None) -> ListNode | None:
     size = 1
     while size < length:
         prev = dummy
-        curr = dummy.next
+        cur = dummy.next
 
-        while curr:
+        while cur:
             # Split off the first sublist of `size` nodes
-            left = curr
+            left = cur
             right = split(left, size)
             # Split off the second sublist of `size` nodes
-            curr = split(right, size)
+            cur = split(right, size)
 
             # Merge the two sorted sublists and splice into result
             merged = merge(left, right)

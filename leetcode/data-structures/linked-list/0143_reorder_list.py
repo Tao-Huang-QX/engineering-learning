@@ -2,18 +2,33 @@
 LeetCode 143: Reorder List
 https://leetcode.com/problems/reorder-list/
 
-Problem: Given the head of a singly linked list, reorder it in place: L0 → Ln → L1 → Ln-1 → L2 → Ln-2 → ...
-You may not modify the values in the list's nodes. Only nodes themselves can be changed.
+Problem: You are given the head of a singly linked-list. The list can be
+represented as: L0 → L1 → … → Ln - 1 → Ln. Reorder the list to be on the
+following form: L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …. You may not modify
+the values in the list's nodes. Only nodes themselves may be changed.
+
+Constraints:
+- The number of nodes in the list is in the range [1, 5 * 10^4]
+- 1 <= Node.val <= 1000
+
+Examples:
+- Input: head = [1,2,3,4]
+  Output: [1,4,2,3]
+
+- Input: head = [1,2,3,4,5]
+  Output: [1,5,2,4,3]
 
 Approach: Three-step in-place (find middle → reverse second half → merge)
-- Slow/fast pointer finds the middle node; stopping at left-middle ensures
-  the first half is never shorter than the second.
-- Reverse the second half starting from slow.next, then disconnect
-  (or simply let the merge overwrite the stale middle link).
-- Interleave by weaving first and second pointers: for each pair,
-  save both nexts, redirect first.next to second and second.next to
-  the saved first.next, then advance. After the second half exhausts,
-  the remaining first node is already the tail — set its next to None.
+- Slow/fast pointers (advance while fast and fast.next) park slow on the
+  right-middle node for even lengths, exact middle for odd lengths
+- Reverse the second half starting AT slow itself (inclusive) — for even
+  lengths the halves then overlap at one node, and the node before it
+  keeps a stale pointer into the reversed part
+- Weave the halves pair by pair: save both nexts, point first.next at the
+  reversed node and its next at the saved first.next, advance both
+- The overlap makes the middle node briefly point to itself; the merge
+  loop clears it (odd lengths) or the final to_end.next = None does
+  (even lengths), which also terminates the list
 
 Time: O(n) — each node visited O(1) times across all phases   Space: O(1)
 """
@@ -36,36 +51,32 @@ def reorder_list(head: ListNode | None) -> None:
     Returns:
         None (modifies list in place)
     """
-    if not head or not head.next:
-        return  # Handles empty and single node
-
     slow = fast = head
-    while fast.next and fast.next.next:  # pyright: ignore[reportOptionalMemberAccess]
+    while fast and fast.next:
         slow = slow.next  # pyright: ignore[reportOptionalMemberAccess]
-        fast = fast.next.next  # pyright: ignore[reportOptionalMemberAccess]
+        fast = fast.next.next
 
     # Reverse the second half
     prev = None
-    curr = slow.next  # pyright: ignore[reportOptionalMemberAccess]
-    while curr:
-        next_node = curr.next
-        curr.next = prev
-        prev = curr
-        curr = next_node
+    cur = slow  # pyright: ignore[reportOptionalMemberAccess]
+    while cur:
+        next_node = cur.next
+        cur.next = prev
+        prev = cur
+        cur = next_node
 
     # Merge the first half with the reversed second half
-    first = head
-    second = prev
-    while first and second:
-        temp1 = first.next
-        first.next = second
-        temp2 = second.next
-        second.next = temp1
-        first = temp1
-        second = temp2
+    l1, l2 = head, prev
+    while l1 and l2:
+        temp1 = l1.next
+        l1.next = l2
+        temp2 = l2.next
+        l2.next = temp1
+        l1 = temp1
+        l2 = temp2
 
     # Handle the termination
-    if to_end := first:
+    if to_end := l1:
         to_end.next = None  # pyright: ignore[reportOptionalMemberAccess]
 
 
