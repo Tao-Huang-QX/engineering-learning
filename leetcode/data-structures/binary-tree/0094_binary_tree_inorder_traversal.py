@@ -52,20 +52,19 @@ def inorder_traversal(root: TreeNode | None) -> list[int]:
     dfs(root)
     return result
     """
-    result = []
-    stack = []
-    curr = root
+    result: list[int] = []
+    stack: list[TreeNode] = []
+    cur = root
 
-    while stack or curr:
+    while stack or cur:
         # Walk left to the bottom, remembering each node along the way
-        while curr:
-            stack.append(curr)
-            curr = curr.left
+        while cur:
+            stack.append(cur)
+            cur = cur.left
         # Can't go left anymore -> the top of the stack is "due"
-        curr = stack.pop()
-        result.append(curr.val)  # visit the node
-        curr = curr.right  # then move to its right subtree
-
+        cur = stack.pop()
+        result.append(cur.val)  # visit the node
+        cur = cur.right  # then move to its right subtree
     return result
 
 

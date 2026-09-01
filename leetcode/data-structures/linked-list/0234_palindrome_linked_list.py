@@ -12,14 +12,16 @@ Constraints:
 Follow-up: Could you do it in O(n) time and O(1) space?
 
 Approach: Fast/slow pointer + reverse second half + compare
-- Slow/fast pointers find the left-middle node: the loop guard
-  `fast.next and fast.next.next` stops `slow` at the last node of the
-  first half for even length, and at the true middle for odd length.
-- Reverse the second half in place starting at slow.next.
+- Slow/fast pointers (advance while fast and fast.next) park slow on the
+  right-middle node for even lengths, true middle for odd lengths
+- Reverse the second half starting AT slow itself (inclusive) — the halves
+  then overlap at one node; the node before it keeps a stale pointer into
+  the reversed part, which the compare loop never follows far enough to hit
 - Walk l1 (head) and l2 (reversed second half) in lockstep; any value
-  mismatch means not a palindrome. The left-middle choice makes l2 the
-  shorter half, so it exhausts first and the loop compares exactly the
-  needed pairs — the odd-length middle node is correctly skipped.
+  mismatch means not a palindrome. For even lengths l2 exhausts right
+  after the needed pairs; for odd lengths the shared middle node compares
+  with itself (trivially equal) and the reversal already set its next to
+  None, so both walks end cleanly
 
 Time: O(n)   Space: O(1)
 """
@@ -42,16 +44,13 @@ def is_palindrome(head: ListNode | None) -> bool:
     Returns:
         True if the list reads the same forwards and backwards, else False
     """
-    if not head or not head.next:
-        return True
-
     slow = fast = head
-    while fast.next and fast.next.next:
+    while fast and fast.next:
         fast = fast.next.next
         slow = slow.next  # pyright: ignore[reportOptionalMemberAccess]
 
     prev = None
-    curr = slow.next  # pyright: ignore[reportOptionalMemberAccess]
+    curr = slow
     while curr:
         next_node = curr.next
         curr.next = prev

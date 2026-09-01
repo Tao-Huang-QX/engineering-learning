@@ -50,34 +50,30 @@ def copy_random_list(head: "Node | None") -> "Node | None":
         Head of a new list mirroring the structure (val, next, random) of the
         original but built from entirely new Node objects.
     """
-    if not head:
-        return None
-
     # Phase 1 - interleave: A -> A' -> B -> B' -> ...
-    curr = head
-    while curr:
-        next_node = curr.next
-        curr.next = Node(curr.val, next_node, None)  # clone spliced after curr
-        curr = next_node
+    cur = head
+    while cur:
+        next_node = cur.next
+        cur.next = Node(cur.val, next_node, None)  # clone spliced after curr
+        cur = next_node
 
     # Phase 2 - wire random: each clone sits right after its original,
     # so A'.random == A.random.next (the clone of A's random target).
-    curr = head
-    while curr:
-        if curr.next and curr.random and curr.random.next:
-            curr.next.random = curr.random.next
-        curr = curr.next.next  # type: ignore # skip the clone
+    cur = head
+    while cur and cur.next:
+        if cur.next and cur.random and cur.random.next:
+            cur.next.random = cur.random.next
+        cur = cur.next.next
 
     # Phase 3 - detach: split the interleaved list back into two.
     dummy = tail = Node(0)
-    curr = head
-    while curr:
-        clone = curr.next
-        tail.next = clone  # type: ignore
-        curr.next = clone.next  # type: ignore
+    cur = head
+    while cur and cur.next:
+        clone = cur.next
+        tail.next = clone
+        cur.next = clone.next
         tail = clone
-        curr = curr.next
-
+        cur = cur.next
     return dummy.next
 
 

@@ -53,19 +53,19 @@ def reverse_k_group(head: ListNode | None, k: int) -> ListNode | None:
             if not probe:  # pyright: ignore[reportOptionalMemberAccess]
                 return dummy.next
 
-        prev, curr = tail, tail.next
+        prev, cur = tail, tail.next
         for _ in range(k):
-            next_node = curr.next  # pyright: ignore[reportOptionalMemberAccess]
-            curr.next = prev  # pyright: ignore[reportOptionalMemberAccess]
-            prev = curr
-            curr = next_node
+            assert cur is not None
+            next_node = cur.next
+            cur.next = prev
+            prev = cur
+            cur = next_node
 
         # Interchange the pointers to the first and last nodes of the sub list
         first_node = tail.next
         tail.next = prev  # Link to the last node of the sub list
-        first_node.next = curr  # pyright: ignore[reportOptionalMemberAccess]
+        first_node.next = cur  # pyright: ignore[reportOptionalMemberAccess]
         tail = first_node  # Now the original first node became the last of the sub list
-
     return dummy.next
 
 
