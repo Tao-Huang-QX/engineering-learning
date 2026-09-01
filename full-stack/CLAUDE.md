@@ -9,6 +9,8 @@ frontend/
   react-typescript/  Vite + React + TypeScript
 projects/
   <name>/     Combined full-stack apps with backend/ + frontend/
+system-design/
+  <name>.md   Design docs, one per system (e.g., flash-sale-system.md)
 ```
 
 ## Backend Conventions (Python)
@@ -48,3 +50,10 @@ Each project must have a README with:
 1. What it does (1-2 sentences)
 2. How to run it (exact commands)
 3. API endpoints or key screens
+
+## System Design Docs
+Design docs live in `system-design/`, one file per system, kebab-case
+(`flash-sale-system.md` is the reference example). Each doc:
+1. Is self-contained — requirements & scale, architecture, key mechanisms, failure modes, trade-offs
+2. Records the concluded design after discussion, including corrections (not the first draft)
+3. Stays design-only — if the system gets built, code goes to `projects/<name>/` and links back to the doc
