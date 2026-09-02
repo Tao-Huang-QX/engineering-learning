@@ -56,7 +56,6 @@ def build_tree(inorder: list[int], postorder: list[int]) -> TreeNode | None:
     return root
     """
     inorder_map = {val: i for i, val in enumerate(inorder)}
-
     root = TreeNode(postorder[-1])
     # node, in_start, in_end, post_start, post_end
     stack = [(root, 0, len(inorder) - 1, 0, len(postorder) - 1)]
@@ -76,7 +75,6 @@ def build_tree(inorder: list[int], postorder: list[int]) -> TreeNode | None:
             right_val = postorder[post_end - 1]
             node.right = TreeNode(right_val)
             stack.append((node.right, in_idx + 1, in_end, post_start + left_size, post_end - 1))
-
     return root
 
 

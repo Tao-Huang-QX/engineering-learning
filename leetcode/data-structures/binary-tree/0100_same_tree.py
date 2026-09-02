@@ -49,13 +49,8 @@ def is_same_tree(p: TreeNode | None, q: TreeNode | None) -> bool:
         return False
     return p.val == q.val and is_same_tree(p.left, q.left) and is_same_tree(p.right, q.right)
     """
-    if not p and not q:
-        return True
-    elif not p or not q:
-        return False
-
-    stack_p = []
-    stack_q = []
+    stack_p: list[TreeNode] = []
+    stack_q: list[TreeNode] = []
     curr_p = p
     curr_q = q
     while stack_p or stack_q or curr_p or curr_q:
@@ -77,7 +72,6 @@ def is_same_tree(p: TreeNode | None, q: TreeNode | None) -> bool:
 
         curr_p = curr_p.right
         curr_q = curr_q.right
-
     return True
 
 

@@ -51,27 +51,26 @@ def is_valid_bst(root: TreeNode) -> bool:
         return dfs(node.left, min_val, node.val) and dfs(node.right, node.val, max_val)
     return dfs(root, float('-inf'), float('inf'))
     """
-    stack = []
-    curr = root
+    stack: list[TreeNode] = []
+    cur = root
     pre_val = None
 
-    while stack or curr:
+    while stack or cur:
         # Walk left to the bottom, pushing each node
-        while curr:
-            stack.append(curr)
-            curr = curr.left
+        while cur:
+            stack.append(cur)
+            cur = cur.left
 
         # Can't go left - visit the node
-        curr = stack.pop()
+        cur = stack.pop()
 
         # Check: current value must be > previous value
-        if pre_val and curr.val <= pre_val:
+        if pre_val and cur.val <= pre_val:
             return False
-        pre_val = curr.val
+        pre_val = cur.val
 
         # Move to the right subtree
-        curr = curr.right
-
+        cur = cur.right
     return True
 
 

@@ -81,7 +81,6 @@ def build_tree(preorder: list[int], inorder: list[int]) -> TreeNode | None:
             right_val = preorder[pre_start + left_size + 1]
             node.right = TreeNode(right_val)
             stack.append((node.right, pre_start + left_size + 1, pre_end, in_idx + 1, in_end))
-
     return root
 
 

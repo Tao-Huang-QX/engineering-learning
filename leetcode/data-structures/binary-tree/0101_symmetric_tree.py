@@ -30,7 +30,7 @@ class TreeNode:
         self.right = right
 
 
-def is_symmetric(root: TreeNode | None) -> bool:
+def is_symmetric(root: TreeNode) -> bool:
     """
     Check if a binary tree is symmetric (mirror of itself).
 
@@ -41,8 +41,6 @@ def is_symmetric(root: TreeNode | None) -> bool:
         True if the tree is symmetric, False otherwise.
     """
     """
-    if not root:
-        return True
     def is_mirror(left: TreeNode | None, right: TreeNode | None) -> bool:
         if not left and not right:
             return True
@@ -53,11 +51,8 @@ def is_symmetric(root: TreeNode | None) -> bool:
         return left.val == right.val and is_mirror(left.left, right.right) and is_mirror(left.right, right.left) # type: ignore
     return is_mirror(root.left, root.right)
     """
-    if not root:
-        return True
-
-    stack_l = []
-    stack_r = []
+    stack_l: list[TreeNode] = []
+    stack_r: list[TreeNode] = []
     curr_l = root.left
     curr_r = root.right
     while stack_l or stack_r or curr_l or curr_r:
@@ -79,15 +74,12 @@ def is_symmetric(root: TreeNode | None) -> bool:
 
         curr_l = curr_l.right
         curr_r = curr_r.left
-
     return True
 
 
 if __name__ == "__main__":
     # Helper to build tree from list (level-order, None for missing nodes)
-    def build_tree(values: list[int | None]) -> TreeNode | None:
-        if not values or values[0] is None:
-            return None
+    def build_tree(values: list[int | None]) -> TreeNode:
         nodes = [TreeNode(v) if v is not None else None for v in values]
         for i in range(len(nodes)):
             if nodes[i]:
@@ -97,7 +89,7 @@ if __name__ == "__main__":
                     nodes[i].left = nodes[left_idx]  # pyright: ignore[reportOptionalMemberAccess]
                 if right_idx < len(nodes):
                     nodes[i].right = nodes[right_idx]  # pyright: ignore[reportOptionalMemberAccess]
-        return nodes[0]
+        return nodes[0]  # pyright: ignore[reportReturnType]
 
     # Test cases from the problem description
     #     1
@@ -114,8 +106,6 @@ if __name__ == "__main__":
     assert not is_symmetric(build_tree([1, 2, 2, None, 3, None, 3]))
     # Single node is symmetric
     assert is_symmetric(build_tree([1]))
-    # Empty tree is symmetric (though constraint says min 1 node)
-    assert is_symmetric(build_tree([]))
     #     1
     #    / \
     #   2   2  -> symmetric
