@@ -13,11 +13,18 @@ Constraints:
 - sub_root is not guaranteed to be a subtree of root.
 
 Approach: Iterative DFS with in-order comparison
-- For each node in root, use is_sametree to check if the subtree matches sub_root exactly
-- A subtree match requires identical structure AND values — not just finding a node with the same value
+Approach: Iterative DFS with in-order comparison
+- Degenerate cases resolve at the boundary: an empty sub_root is a subtree
+  of anything (True); an empty root cannot contain a non-empty sub_root
+  (False) — everything below runs in a None-free world
+- Walk root in order with a stack (exactly one cur = cur.right advance
+  per pop); at each node, compare its subtree against sub_root
+- is_sametree: two synchronized stacks traverse both trees in order;
+  equal stack lengths each round pin down the shape, and popped values
+  must match — an upfront root-value check rejects wrong-root candidates
+  in O(1) before any stack work
 
 Time: O(n × m)   Space: O(h + m)
-where n = nodes in root, m = nodes in sub_root, h = height of root
 """
 
 
@@ -48,44 +55,47 @@ def is_subtree(root: TreeNode | None, sub_root: TreeNode | None) -> bool:
         return False
 
     def is_sametree(left: TreeNode, right: TreeNode) -> bool:
-        stack_l = []
-        stack_r = []
-        curr_l = left
-        curr_r = right
+        if left.val != right.val:
+            return False
 
-        while stack_l or curr_l or stack_r or curr_r:
-            while curr_l:
-                stack_l.append(curr_l)
-                curr_l = curr_l.left
-            while curr_r:
-                stack_r.append(curr_r)
-                curr_r = curr_r.left
+        stack_l: list[TreeNode] = []
+        stack_r: list[TreeNode] = []
+        cur_l = left
+        cur_r = right
+
+        while stack_l or cur_l or stack_r or cur_r:
+            while cur_l:
+                stack_l.append(cur_l)
+                cur_l = cur_l.left
+            while cur_r:
+                stack_r.append(cur_r)
+                cur_r = cur_r.left
 
             if len(stack_l) != len(stack_r):
                 return False
 
-            curr_l = stack_l.pop()
-            curr_r = stack_r.pop()
-            if curr_l.val != curr_r.val:
+            cur_l = stack_l.pop()
+            cur_r = stack_r.pop()
+            if cur_l.val != cur_r.val:
                 return False
 
-            curr_l = curr_l.right
-            curr_r = curr_r.right
+            cur_l = cur_l.right
+            cur_r = cur_r.right
 
         return True
 
-    stack = []
-    curr = root
-    while stack or curr:
-        while curr:
-            stack.append(curr)
-            curr = curr.left
+    stack: list[TreeNode] = []
+    cur = root
+    while stack or cur:
+        while cur:
+            stack.append(cur)
+            cur = cur.left
 
-        curr = stack.pop()
-        if is_sametree(curr, sub_root):
+        cur = stack.pop()
+        if is_sametree(cur, sub_root):
             return True
 
-        curr = curr.right
+        cur = cur.right
     return False
 
 

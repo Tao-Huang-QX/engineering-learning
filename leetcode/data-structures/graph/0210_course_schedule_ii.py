@@ -52,7 +52,6 @@ def find_order(num_courses: int, prerequisites: list[list[int]]) -> list[int]:
     result = []
     queue = deque([course for course in range(num_courses) if indegree[course] == 0])
     count = 0
-
     while queue:
         curr = queue.popleft()
         result.append(curr)
@@ -63,7 +62,6 @@ def find_order(num_courses: int, prerequisites: list[list[int]]) -> list[int]:
 
             if indegree[course] == 0:
                 queue.append(course)
-
     return result if count == num_courses else []
 
 

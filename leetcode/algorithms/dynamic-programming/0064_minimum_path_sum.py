@@ -14,7 +14,7 @@ Constraints:
 
 Approach: 2D DP with in-place modification
 - Initialize first row and first column with cumulative sums (base cases)
-- For interior cells: dp[i][j] = grid[i][j] + min(dp[i-1][j], dp[i][j-1])
+- For interior cells: dp[r][c] = grid[r][c] + min(dp[r-1][c], dp[r][c-1])
 - Reuse input grid as DP table for O(1) space
 
 Time: O(m × n)   Space: O(1)
@@ -31,17 +31,16 @@ def min_path_sum(grid: list[list[int]]) -> int:
     Returns:
         Minimum sum of numbers along a path moving only down or right
     """
-    row, col = len(grid), len(grid[0])
-    for r in range(1, row):
+    m, n = len(grid), len(grid[0])
+    for r in range(1, m):
         grid[r][0] += grid[r - 1][0]
 
-    for c in range(1, col):
+    for c in range(1, n):
         grid[0][c] += grid[0][c - 1]
 
-    for r in range(1, row):
-        for c in range(1, col):
+    for r in range(1, m):
+        for c in range(1, n):
             grid[r][c] = grid[r][c] + min(grid[r - 1][c], grid[r][c - 1])
-
     return grid[-1][-1]
 
 

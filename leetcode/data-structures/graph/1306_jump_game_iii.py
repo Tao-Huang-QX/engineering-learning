@@ -37,19 +37,19 @@ def can_reach(arr: list[int], start: int) -> bool:
     visited = set()
 
     while queue:
-        curr = queue.popleft()
-        visited.add(curr)
+        cur = queue.popleft()
+        visited.add(cur)
 
-        if arr[curr] == 0:
+        if arr[cur] == 0:
             return True
         else:
-            diff = curr - arr[curr]
-            sum_ = curr + arr[curr]
-            if 0 <= diff and diff not in visited:
+            diff = cur - arr[cur]
+            sum_ = cur + arr[cur]
+
+            if -1 < diff and diff not in visited:
                 queue.append(diff)
             if sum_ < len(arr) and sum_ not in visited:
                 queue.append(sum_)
-
     return False
 
 

@@ -39,9 +39,6 @@ def oranges_rotting(grid: list[list[int]]) -> int:
     Returns:
         Minimum minutes to rot all oranges, or -1 if impossible.
     """
-    if not grid:
-        return -1
-
     row, col = len(grid), len(grid[0])
     queue = deque()
     fresh_count = 0
@@ -58,7 +55,7 @@ def oranges_rotting(grid: list[list[int]]) -> int:
     if fresh_count == 0:
         return 0
     # No rotten oranges to spread:
-    if not queue and fresh_count > 0:
+    if not queue:
         return -1
 
     # Step 2: Muti-source BFS - spread level by level
@@ -78,7 +75,6 @@ def oranges_rotting(grid: list[list[int]]) -> int:
                     grid[nr][nc] = 2  # Rot it
                     fresh_count -= 1
                     queue.append((nr, nc))
-
     return result if fresh_count == 0 else -1
 
 
