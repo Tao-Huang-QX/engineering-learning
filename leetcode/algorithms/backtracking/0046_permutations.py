@@ -39,10 +39,7 @@ def permute(nums: list[int]) -> list[list[int]]:
     Returns:
         List of all permutations (any order)
     """
-    if len(nums) == 1:
-        return [nums.copy()]
-
-    ans = []
+    ans: list[list[int]] = []
     used = [False] * len(nums)
 
     def backtrack(sol: list[int]) -> None:

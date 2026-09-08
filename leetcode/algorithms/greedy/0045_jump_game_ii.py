@@ -34,13 +34,9 @@ def jump(nums: list[int]) -> int:
     Returns:
         Minimum number of jumps to reach the last index
     """
-    if len(nums) == 1:
-        return 0
-
     jumps = 0
     current_end = 0  # Farthest position reachable with `jumps` jumps
     farthest = 0  # Farthest position reachable with `jumps + 1` jumps
-
     for i in range(len(nums) - 1):
         farthest = max(farthest, i + nums[i])
 
@@ -51,7 +47,6 @@ def jump(nums: list[int]) -> int:
 
             if current_end >= len(nums) - 1:
                 break
-
     return jumps
 
 

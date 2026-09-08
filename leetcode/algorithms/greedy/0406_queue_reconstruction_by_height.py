@@ -36,9 +36,6 @@ def reconstruct_queue(people: list[list[int]]) -> list[list[int]]:
     Returns:
         Reconstructed queue satisfying all [h, k] constraints
     """
-    if len(people) == 1:
-        return people
-
     people.sort(key=lambda x: (-x[0], x[1]))
     queue = []
     for person in people:
