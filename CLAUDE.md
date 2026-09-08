@@ -17,6 +17,7 @@ full-stack/         End-to-end application development
   backend/          Python (FastAPI/Flask) and Java (Spring Boot)
   frontend/         React + TypeScript
   projects/         Combined full-stack applications
+  system-design/    System design interview docs (one per system)
 
 data-engineering/   Data infrastructure and pipeline work
   pipelines/        ETL/ELT pipeline projects

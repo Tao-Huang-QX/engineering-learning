@@ -37,7 +37,7 @@ def reconstruct_queue(people: list[list[int]]) -> list[list[int]]:
         Reconstructed queue satisfying all [h, k] constraints
     """
     people.sort(key=lambda x: (-x[0], x[1]))
-    queue = []
+    queue: list[list[int]] = []
     for person in people:
         queue.insert(person[1], person)
     return queue
