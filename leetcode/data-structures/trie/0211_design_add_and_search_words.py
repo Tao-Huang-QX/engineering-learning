@@ -38,7 +38,7 @@ Space: O(total characters added) — each unique prefix creates one node
 
 class TrieNode:
     def __init__(self):
-        self.children = {}
+        self.children: dict[str, TrieNode] = {}
         self.is_end = False
 
 

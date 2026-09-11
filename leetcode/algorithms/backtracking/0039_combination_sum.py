@@ -44,7 +44,7 @@ def combination_sum(candidates: list[int], target: int) -> list[list[int]]:
     Returns:
         List of unique combinations (each combination is a list of integers)
     """
-    ans = []
+    ans: list[list[int]] = []
 
     def backtrack(start: int, remaining: int, sol: list[int]) -> None:
         if remaining == 0:
