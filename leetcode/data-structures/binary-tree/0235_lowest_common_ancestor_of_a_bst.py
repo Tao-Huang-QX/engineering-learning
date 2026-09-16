@@ -50,15 +50,14 @@ def lowest_common_ancestor(root: TreeNode, p: TreeNode, q: TreeNode) -> TreeNode
     Returns:
         The LCA node
     """
-    curr = root
-
-    while curr:
-        if p.val < curr.val and q.val < curr.val:
-            curr = curr.left
-        elif p.val > curr.val and q.val > curr.val:
-            curr = curr.right
+    cur = root
+    while cur:
+        if p.val < cur.val and q.val < cur.val:
+            cur = cur.left
+        elif p.val > cur.val and q.val > cur.val:
+            cur = cur.right
         else:
-            return curr
+            return cur
 
 
 if __name__ == "__main__":

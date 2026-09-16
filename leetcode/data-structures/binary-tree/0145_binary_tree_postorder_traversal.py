@@ -53,31 +53,26 @@ def postorder_traversal(root: TreeNode | None) -> list[int]:
     dfs(root)
     return result
     """
-    if not root:
-        return []
-
-    stack = []
-    result = []
-    curr = root
+    stack: list[TreeNode] = []
+    result: list[int] = []
+    cur = root
     last_visited = None
-
-    while stack or curr:
+    while stack or cur:
         # Go as deep left as possible
-        if curr:
-            stack.append(curr)
-            curr = curr.left
+        if cur:
+            stack.append(cur)
+            cur = cur.left
         else:
             # Peek at top of stack
             temp = stack[-1]
             # If right child exists and Not visited it yet, go right
             if temp.right and temp.right != last_visited:
-                curr = temp.right
+                cur = temp.right
             # Both children processed -> this is time to visit
             else:
                 result.append(temp.val)
                 last_visited = temp
                 stack.pop()
-
     return result
 
 

@@ -78,30 +78,26 @@ def delete_node(root: TreeNode | None, key: int) -> TreeNode | None:
     dfs(root, key)  # pyright: ignore[reportArgumentType]
     return root
     """
-    if not root:
-        return None
-
     # Find node to delete and its parent
-    curr = root
+    cur = root
     parent = None
     is_left_child = False
+    while cur and cur.val != key:
+        parent = cur
 
-    while curr and curr.val != key:
-        parent = curr
-
-        if key < curr.val:
-            curr = curr.left
+        if key < cur.val:
+            cur = cur.left
             is_left_child = True
         else:
-            curr = curr.right
+            cur = cur.right
             is_left_child = False
 
-    if not curr:
+    if not cur:
         return root
 
     # Case 1 & 2: Node has 0 or 1 child
-    if not curr.left or not curr.right:
-        child = curr.left or curr.right
+    if not cur.left or not cur.right:
+        child = cur.left or cur.right
 
         # Node is root
         if not parent:
@@ -115,22 +111,21 @@ def delete_node(root: TreeNode | None, key: int) -> TreeNode | None:
     # Case 3: Node has two children
     else:
         # Find inorder successor (min in right subtree) and its parent
-        succ_parent = curr
-        succ = curr.right
+        succ_parent = cur
+        succ = cur.right
 
         while succ.left:
             succ_parent = succ
             succ = succ.left
 
         # Copy successor's val
-        curr.val = succ.val
+        cur.val = succ.val
 
         # Delete successor (has 0 or 1 child - no left child by definition)
-        if succ_parent == curr:
+        if succ_parent == cur:
             succ_parent.right = succ.right
         else:
             succ_parent.left = succ.right
-
     return root
 
 
