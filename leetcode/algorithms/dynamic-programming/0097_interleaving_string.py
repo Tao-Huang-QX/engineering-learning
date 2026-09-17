@@ -68,7 +68,6 @@ def is_interleave(s1: str, s2: str, s3: str) -> bool:
                 dp[i][j] = dp[i][j] or dp[i - 1][j]
             if s2[j - 1] == s3[k]:
                 dp[i][j] = dp[i][j] or dp[i][j - 1]
-
     return dp[len1][len2]
 
 

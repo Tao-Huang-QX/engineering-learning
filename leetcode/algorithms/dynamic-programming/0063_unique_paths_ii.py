@@ -51,7 +51,6 @@ def unique_paths_with_obstacles(obstacle_grid: list[list[int]]) -> int:
 
     dp = [[0] * col for _ in range(row)]
     dp[0][0] = 1
-
     for i in range(1, row):
         if obstacle_grid[i][0] == 0:
             dp[i][0] = dp[i - 1][0]
@@ -64,7 +63,6 @@ def unique_paths_with_obstacles(obstacle_grid: list[list[int]]) -> int:
         for c in range(1, col):
             if obstacle_grid[r][c] == 0:
                 dp[r][c] = dp[r - 1][c] + dp[r][c - 1]
-
     return dp[-1][-1]
 
 

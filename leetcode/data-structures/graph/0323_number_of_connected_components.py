@@ -78,6 +78,7 @@ def count_components(n: int, edges: list[list[int]]) -> int:
     def union(x: int, y: int) -> None:
         """Union by rank - attach smaller tree under larger"""
         root_x, root_y = find(x), find(y)
+
         if root_x != root_y:
             if rank[root_x] < rank[root_y]:
                 parent[root_x] = root_y
