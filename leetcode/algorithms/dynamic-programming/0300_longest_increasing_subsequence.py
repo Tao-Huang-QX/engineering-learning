@@ -56,8 +56,10 @@ def length_of_lis(nums: list[int]) -> int:
     for num in nums:
         # Binary search: find first tail >= num
         left, right = 0, len(tails)
+
         while left < right:
             mid = (left + right) // 2
+
             if tails[mid] < num:
                 left = mid + 1
             else:
@@ -68,7 +70,6 @@ def length_of_lis(nums: list[int]) -> int:
             tails.append(num)
         else:
             tails[left] = num
-
     return len(tails)
 
 

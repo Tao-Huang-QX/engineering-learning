@@ -70,9 +70,9 @@ def max_profit(prices: list[int]) -> int:
     """
     hold, sold, rest = -prices[0], 0, 0
     for price in prices[1:]:
-        pre_hold, prev_sold, prev_rest = hold, sold, rest
-        hold = max(pre_hold, prev_rest - price)
-        sold = pre_hold + price
+        prev_hold, prev_sold, prev_rest = hold, sold, rest
+        hold = max(prev_hold, prev_rest - price)
+        sold = prev_hold + price
         rest = max(prev_rest, prev_sold)
     return max(sold, rest)
 

@@ -6,7 +6,8 @@ Problem: There is an integer array nums sorted in ascending order (with distinct
 
 Approach:
 - At least one half of the array is always sorted in a rotated array
-- Check which half is sorted (number[left] < number[middle])
+- Check which half is sorted (nums[left] <= nums[middle]; the equal sign
+  matters — see the note at the branch in the code)
 - Determine if target is in the sorted half
 - Narrow search to the half that contains target
 
@@ -29,13 +30,14 @@ def search(nums: list[int], target: int) -> int:
     while left <= right:
         middle = (left + right) // 2
 
-        # Handle 2-element case
-        if left == middle and nums[right] == target:
-            return right
-
         if nums[middle] == target:
             return middle
-        elif nums[left] < nums[middle]:  # Left half is sorted
+        # The <= is load-bearing: in a 2-element window the floor mid collapses
+        # onto left, so a strict < here would self-compare (always false), read
+        # the window as right-sorted, and discard the never-examined right
+        # element — losing targets like nums=[3, 1], target=1. A one-element
+        # left half is trivially sorted, hence the equal sign.
+        elif nums[left] <= nums[middle]:  # Left half is sorted
             if nums[left] <= target < nums[middle]:  # Target in left half
                 right = middle - 1
             else:  # Target in the right half
