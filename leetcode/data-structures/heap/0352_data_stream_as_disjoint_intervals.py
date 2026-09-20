@@ -81,7 +81,6 @@ class SummaryRanges:
             for v in range(start, end + 1):
                 heapq.heappush(self.heap, v)
                 self.seen.add(v)
-
         return intervals
 """
 
@@ -141,7 +140,6 @@ class SummaryRanges:
             iv = (s, e)
             heapq.heappush(self.heap, iv)
             self.seen.add(iv)
-
         return merged
 
 

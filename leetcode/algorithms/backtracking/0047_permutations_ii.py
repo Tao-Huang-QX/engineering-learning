@@ -38,9 +38,6 @@ def permute_unique(nums: list[int]) -> list[list[int]]:
     Returns:
         List of all unique permutations (any order)
     """
-    if len(nums) == 1:
-        return [nums.copy()]
-
     nums.sort()
     ans: list[list[int]] = []
     used = [False] * len(nums)
@@ -58,8 +55,8 @@ def permute_unique(nums: list[int]) -> list[list[int]]:
             if i > 0 and nums[i] == nums[i - 1] and not used[i - 1]:
                 continue
 
-            used[i] = True
             sol.append(nums[i])
+            used[i] = True
             backtrack(sol)
             sol.pop()
             used[i] = False

@@ -55,7 +55,6 @@ def max_profit(prices: list[int]) -> int:
         buy2 = max(buy2, sell1 - price)
         sell1 = max(sell1, buy1 + price)
         buy1 = max(buy1, -price)
-
     return sell2  # pyright: ignore[reportReturnType]
 
 
