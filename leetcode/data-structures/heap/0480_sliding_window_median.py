@@ -135,7 +135,6 @@ def median_sliding_window(nums: list[int], k: int) -> list[float]:
         remove(nums[i - k])
         add(nums[i])
         result.append(get_median())
-
     return result
 
 

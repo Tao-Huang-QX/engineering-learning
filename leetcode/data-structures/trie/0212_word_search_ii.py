@@ -66,6 +66,7 @@ def find_words(board: list[list[str]], words: list[str]) -> list[str]:
     # Build Trie from all words
     for word in words:
         node = root
+
         for char in word:
             if char not in node.children:
                 node.children[char] = TrieNode()
@@ -85,7 +86,6 @@ def find_words(board: list[list[str]], words: list[str]) -> list[str]:
 
         next_node = node.children[ch]
         path += ch
-
         if next_node.is_end:
             result.append(path)
             next_node.is_end = False  # Avoid duplicates
@@ -102,7 +102,6 @@ def find_words(board: list[list[str]], words: list[str]) -> list[str]:
     for r in range(m):
         for c in range(n):
             dfs(r, c, root, "")
-
     return result
 
 
