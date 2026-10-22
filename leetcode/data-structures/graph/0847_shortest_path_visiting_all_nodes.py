@@ -56,13 +56,11 @@ def shortest_path_length(graph: list[list[int]]) -> int:
         return 0
 
     all_visited = (1 << n) - 1  # e.g., n=4 -> 1111 = 15
-
     # Multi-source BFS: start from every node simultaneously
-    queue = deque()
+    queue: deque[tuple[int, int, int]] = deque()
     # visited[node][mask]: True if state (node, mask) has been enqueued.
     # BFS reaches each state at its shortest distance first - skip on re-encounter
     visited = [[False] * (1 << n) for _ in range(n)]
-
     for node in range(n):
         mask = 1 << node
         queue.append((node, mask, 0))  # (current_node, visisted_mask, path_length)
@@ -78,7 +76,6 @@ def shortest_path_length(graph: list[list[int]]) -> int:
             if not visited[neighbor][new_mask]:
                 visited[neighbor][new_mask] = True
                 queue.append((neighbor, new_mask, length + 1))
-
     return -1  # unreachable (shouldn't happen, graph is connected)
 
 

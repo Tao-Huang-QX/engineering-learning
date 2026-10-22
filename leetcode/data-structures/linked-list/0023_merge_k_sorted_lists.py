@@ -80,7 +80,6 @@ def merge_k_lists(lists: list[ListNode | None]) -> ListNode | None:
         for i in range(0, k - interval, interval * 2):
             lists[i] = merge_two(lists[i], lists[i + interval])  # pyright: ignore[reportArgumentType]
         interval *= 2
-
     return lists[0]
 
 
