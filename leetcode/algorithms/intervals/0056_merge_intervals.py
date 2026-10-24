@@ -42,15 +42,13 @@ def merge(intervals: list[list[int]]) -> list[list[int]]:
         List of merged non-overlapping intervals
     """
     intervals.sort()
-    result: list[list[int]] = []
-
+    results: list[list[int]] = []
     for s, e in intervals:
-        if result and s <= result[-1][1]:
-            result[-1][1] = max(result[-1][1], e)
+        if results and s <= results[-1][1]:
+            results[-1][1] = max(results[-1][1], e)
         else:
-            result.append([s, e])
-
-    return result
+            results.append([s, e])
+    return results
 
 
 if __name__ == "__main__":

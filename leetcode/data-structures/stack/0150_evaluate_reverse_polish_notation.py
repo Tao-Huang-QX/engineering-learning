@@ -58,7 +58,6 @@ def eval_rpn(tokens: list[str]) -> int:
     """
     stack: list[int] = []
     operators = {"+", "-", "*", "/"}
-
     for token in tokens:
         if token in operators:
             num2 = stack.pop()
@@ -75,7 +74,6 @@ def eval_rpn(tokens: list[str]) -> int:
                     stack.append(int(num1 / num2))
         else:
             stack.append(int(token))
-
     return stack[0]
 
 

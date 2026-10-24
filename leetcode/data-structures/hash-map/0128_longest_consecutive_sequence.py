@@ -55,9 +55,7 @@ def longest_consecutive(nums: list[int]) -> int:
             while cur in unique_nums:
                 cur += 1
                 count += 1
-
             result = max(result, count)
-
     return result
 
 

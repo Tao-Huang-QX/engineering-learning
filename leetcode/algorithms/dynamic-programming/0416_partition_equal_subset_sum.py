@@ -43,19 +43,16 @@ def can_partition(nums: list[int]) -> bool:
         True if equal-sum partition exists
     """
     total = sum(nums)
-
     # Odd total can't be split into two equad halves
     if total % 2 == 1:
         return False
 
     target = total // 2
-    dp = [False] * (total + 1)
+    dp = [False] * (target + 1)
     dp[0] = True  # empty subset sums to 0
-
     for num in nums:  # outer loop: items
         for j in range(target, num - 1, -1):  # inner: capacities, backwards
             dp[j] = dp[j] or dp[j - num]
-
     return dp[target]
 
 

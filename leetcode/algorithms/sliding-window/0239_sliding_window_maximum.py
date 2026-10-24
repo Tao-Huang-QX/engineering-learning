@@ -56,7 +56,6 @@ def max_sliding_window(nums: list[int], k: int) -> list[int]:
     """
     queue: deque[int] = deque()  # indices, values descending
     result: list[int] = []
-
     for i in range(len(nums)):
         # 1. Pop right: discard indices whose value <= current
         while queue and nums[queue[-1]] <= nums[i]:
@@ -70,7 +69,6 @@ def max_sliding_window(nums: list[int], k: int) -> list[int]:
         # 3. Output: once the first window is formed
         if i >= k - 1:
             result.append(nums[queue[0]])
-
     return result
 
 
