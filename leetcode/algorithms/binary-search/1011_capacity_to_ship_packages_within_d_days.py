@@ -75,7 +75,6 @@ def ship_within_days(weights: list[int], days: int) -> int:
     # left: smallest possible capacity (can't split a package)
     # right: largest possible capacity (all in one day)
     left, right = max(weights), sum(weights)
-
     while left < right:
         mid = (left + right) // 2
 
@@ -83,7 +82,6 @@ def ship_within_days(weights: list[int], days: int) -> int:
             right = mid  # mid works, try smaller
         else:
             left = mid + 1  # mid too small, must go bigger
-
     return left
 
 

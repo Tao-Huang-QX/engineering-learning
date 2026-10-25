@@ -53,7 +53,6 @@ def flatten(root: TreeNode | None) -> None:
         return
 
     stack: list[TreeNode] = [root]
-
     while stack:
         node = stack.pop()
 

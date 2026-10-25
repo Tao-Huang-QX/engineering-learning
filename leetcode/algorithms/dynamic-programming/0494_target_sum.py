@@ -51,11 +51,9 @@ def find_target_sum_ways(nums: list[int], target: int) -> int:
     s_pos = (total + target) // 2
     dp = [0] * (s_pos + 1)
     dp[0] = 1
-
     for num in nums:
         for j in range(s_pos, num - 1, -1):
             dp[j] = dp[j] + dp[j - num]
-
     return dp[s_pos]
 
 
