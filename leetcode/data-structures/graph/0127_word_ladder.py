@@ -64,7 +64,6 @@ def ladder_length(begin_word: str, end_word: str, word_list: list[str]) -> int:
     visited = {begin_word, end_word}
     length = 1
     word_len = len(begin_word)
-
     while forward:
         if len(forward) > len(backward):
             forward, backward = backward, forward  # always expand the smaller set
@@ -84,7 +83,6 @@ def ladder_length(begin_word: str, end_word: str, word_list: list[str]) -> int:
 
         forward = next_frontier
         length += 1
-
     return 0
 
 

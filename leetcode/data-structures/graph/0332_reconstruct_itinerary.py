@@ -52,7 +52,7 @@ def find_itinerary(tickets: list[list[str]]) -> list[str]:
         Itinerary as a list of airport codes
     """
     # Collect edges
-    adjacent = defaultdict(list)
+    adjacent = defaultdict(list[str])
     for origin, destination in tickets:
         adjacent[origin].append(destination)
 

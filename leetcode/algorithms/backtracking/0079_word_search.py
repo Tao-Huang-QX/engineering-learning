@@ -65,7 +65,6 @@ def exist(board: list[list[str]], word: str) -> bool:
                 board[r][c] = word[i]  # restore before success
                 return True
         board[r][c] = word[i]  # restore after failure
-
         return False
 
     for r in range(m):

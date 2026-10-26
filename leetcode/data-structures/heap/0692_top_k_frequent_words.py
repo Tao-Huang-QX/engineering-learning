@@ -62,7 +62,6 @@ def top_k_frequent(words: list[str], k: int) -> list[str]:
     """
     counter = Counter(words)
     heap: list[Candidate] = []
-
     for word, freq in counter.items():
         heapq.heappush(heap, Candidate(word, freq))
         if len(heap) > k:
@@ -72,7 +71,6 @@ def top_k_frequent(words: list[str], k: int) -> list[str]:
     result: list[str] = []
     while heap:
         result.append(heapq.heappop(heap).word)
-
     return result[::-1]
 
 
