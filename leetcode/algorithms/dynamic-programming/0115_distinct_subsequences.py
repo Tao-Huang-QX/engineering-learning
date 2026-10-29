@@ -44,7 +44,6 @@ def num_distinct(s: str, t: str) -> int:
     """
     m, n = len(s), len(t)
     dp = [[0] * (n + 1) for _ in range(m + 1)]
-
     for i in range(m + 1):
         dp[i][n] = 1  # t exhausted -> 1 way, skip everything remaining
 
@@ -54,7 +53,6 @@ def num_distinct(s: str, t: str) -> int:
 
             if s[i] == t[j]:
                 dp[i][j] += dp[i + 1][j + 1]  # diagonal: match both
-
     return dp[0][0]
 
 

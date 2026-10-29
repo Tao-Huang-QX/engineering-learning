@@ -127,4 +127,73 @@ Work through in order. Check off as completed.
 | 119 | 402 | [Remove K Digits](https://leetcode.com/problems/remove-k-digits/) | M | Monotonic stack |
 | 120 | 349 | [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/) | E | HashSet |
 
-**Hard problems:** 33, 48, 91, 92, 93, 95, 96, 100, 104, 108, 109, 110 (12 problems)
+<!-- Batch 1 of 3: one quiz per category -->
+| 121 | 131 | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | M | Backtracking + partition |
+| 122 | 4 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | H | Binary search on partition |
+| 123 | 136 | [Single Number](https://leetcode.com/problems/single-number/) | E | XOR cancel pairs |
+| 124 | 152 | [Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/) | M | Kadane with sign tracking |
+| 125 | 135 | [Candy](https://leetcode.com/problems/candy/) | H | Greedy two-pass |
+| 126 | 57 | [Insert Interval](https://leetcode.com/problems/insert-interval/) | M | Interval merge |
+| 127 | 50 | [Pow(x, n)](https://leetcode.com/problems/powx-n/) | M | Fast exponentiation |
+| 128 | 8 | [String to Integer (atoi)](https://leetcode.com/problems/string-to-integer-atoi/) | M | Parsing / state machine |
+| 129 | 287 | [Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/) | M | Floyd cycle detection |
+| 130 | 560 | [Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/) | M | Prefix sum + hash map |
+| 131 | 424 | [Longest Repeating Character Replacement](https://leetcode.com/problems/longest-repeating-character-replacement/) | M | Sliding window |
+| 132 | 75 | [Sort Colors](https://leetcode.com/problems/sort-colors/) | M | Dutch national flag |
+| 133 | 54 | [Spiral Matrix](https://leetcode.com/problems/spiral-matrix/) | M | Boundary simulation |
+| 134 | 543 | [Diameter of Binary Tree](https://leetcode.com/problems/diameter-of-binary-tree/) | E | Tree DFS + global max |
+| 135 | 743 | [Network Delay Time](https://leetcode.com/problems/network-delay-time/) | M | Dijkstra |
+| 136 | 383 | [Ransom Note](https://leetcode.com/problems/ransom-note/) | E | Frequency map |
+| 137 | 295 | [Find Median from Data Stream](https://leetcode.com/problems/find-median-from-data-stream/) | H | Two heaps |
+| 138 | 2 | [Add Two Numbers](https://leetcode.com/problems/add-two-numbers/) | M | Linked list addition |
+| 139 | 155 | [Min Stack](https://leetcode.com/problems/min-stack/) | M | Stack with min tracking |
+| 140 | 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | E | Vertical scan |
+| 141 | 421 | [Maximum XOR of Two Numbers in an Array](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/) | M | Bitwise trie |
+
+<!-- Batch 2 of 3: one quiz per category -->
+| 142 | 51 | [N-Queens](https://leetcode.com/problems/n-queens/) | H | Backtracking + constraint sets |
+| 143 | 34 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | M | Lower/upper bound |
+| 144 | 137 | [Single Number II](https://leetcode.com/problems/single-number-ii/) | M | Bit counting |
+| 145 | 279 | [Perfect Squares](https://leetcode.com/problems/perfect-squares/) | M | Unbounded knapsack DP |
+| 146 | 134 | [Gas Station](https://leetcode.com/problems/gas-station/) | M | Greedy |
+| 147 | 435 | [Non-overlapping Intervals](https://leetcode.com/problems/non-overlapping-intervals/) | M | Greedy by end |
+| 148 | 69 | [Sqrt(x)](https://leetcode.com/problems/sqrtx/) | E | Binary search |
+| 149 | 68 | [Text Justification](https://leetcode.com/problems/text-justification/) | H | Simulation |
+| 150 | 169 | [Majority Element](https://leetcode.com/problems/majority-element/) | E | Boyer–Moore voting |
+| 151 | 1109 | [Corporate Flight Bookings](https://leetcode.com/problems/corporate-flight-bookings/) | M | Difference array |
+| 152 | 76 | [Minimum Window Substring](https://leetcode.com/problems/minimum-window-substring/) | H | Sliding window + counts |
+| 153 | 977 | [Squares of a Sorted Array](https://leetcode.com/problems/squares-of-a-sorted-array/) | E | Two pointers |
+| 154 | 118 | [Pascal's Triangle](https://leetcode.com/problems/pascals-triangle/) | E | Row-by-row build |
+| 155 | 297 | [Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/) | H | Preorder traversal |
+| 156 | 815 | [Bus Routes](https://leetcode.com/problems/bus-routes/) | H | Multi-source BFS |
+| 157 | 454 | [4Sum II](https://leetcode.com/problems/4sum-ii/) | M | Hash pair counts |
+| 158 | 973 | [K Closest Points to Origin](https://leetcode.com/problems/k-closest-points-to-origin/) | M | Heap size-k |
+| 159 | 19 | [Remove Nth Node From End of List](https://leetcode.com/problems/remove-nth-node-from-end-of-list/) | M | Two pointers gap |
+| 160 | 224 | [Basic Calculator](https://leetcode.com/problems/basic-calculator/) | H | Stack evaluation |
+| 161 | 443 | [String Compression](https://leetcode.com/problems/string-compression/) | M | Run-length encoding |
+| 162 | 648 | [Replace Words](https://leetcode.com/problems/replace-words/) | M | Trie prefix match |
+
+<!-- Batch 3 of 3: one quiz per category -->
+| 163 | 22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | M | Backtracking |
+| 164 | 875 | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | M | Binary search on answer |
+| 165 | 260 | [Single Number III](https://leetcode.com/problems/single-number-iii/) | M | XOR + bit partition |
+| 166 | 10 | [Regular Expression Matching](https://leetcode.com/problems/regular-expression-matching/) | H | 2D DP on strings |
+| 167 | 767 | [Reorganize String](https://leetcode.com/problems/reorganize-string/) | M | Greedy + heap |
+| 168 | 452 | [Minimum Number of Arrows to Burst Balloons](https://leetcode.com/problems/minimum-number-of-arrows-to-burst-balloons/) | M | Greedy by end |
+| 169 | 7 | [Reverse Integer](https://leetcode.com/problems/reverse-integer/) | M | Digit manipulation |
+| 170 | 412 | [Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) | E | Simulation |
+| 171 | 442 | [Find All Duplicates in an Array](https://leetcode.com/problems/find-all-duplicates-in-an-array/) | M | In-place index marking |
+| 172 | 303 | [Range Sum Query - Immutable](https://leetcode.com/problems/range-sum-query-immutable/) | E | Prefix sum |
+| 173 | 904 | [Fruit Into Baskets](https://leetcode.com/problems/fruit-into-baskets/) | M | Sliding window |
+| 174 | 80 | [Remove Duplicates from Sorted Array II](https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/) | M | Read/write two pointers |
+| 175 | 48 | [Rotate Image](https://leetcode.com/problems/rotate-image/) | M | Transpose + reverse |
+| 176 | 103 | [Binary Tree Zigzag Level Order Traversal](https://leetcode.com/problems/binary-tree-zigzag-level-order-traversal/) | M | BFS with deque |
+| 177 | 1584 | [Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/) | M | MST (Prim) |
+| 178 | 41 | [First Missing Positive](https://leetcode.com/problems/first-missing-positive/) | H | Index as hash |
+| 179 | 621 | [Task Scheduler](https://leetcode.com/problems/task-scheduler/) | M | Greedy + counting |
+| 180 | 142 | [Linked List Cycle II](https://leetcode.com/problems/linked-list-cycle-ii/) | M | Floyd cycle entry |
+| 181 | 316 | [Remove Duplicate Letters](https://leetcode.com/problems/remove-duplicate-letters/) | M | Monotonic stack |
+| 182 | 165 | [Compare Version Numbers](https://leetcode.com/problems/compare-version-numbers/) | M | Two pointers parse |
+| 183 | 677 | [Map Sum Pairs](https://leetcode.com/problems/map-sum-pairs/) | M | Trie with counts |
+
+**Hard problems:** 33, 48, 91, 92, 93, 95, 96, 100, 104, 108, 109, 110, 113, 122, 125, 137, 142, 149, 152, 155, 156, 160, 166, 178 (24 problems)
