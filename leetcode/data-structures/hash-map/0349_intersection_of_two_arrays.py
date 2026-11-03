@@ -41,7 +41,7 @@ def intersection(nums1: list[int], nums2: list[int]) -> list[int]:
     Returns:
         Array of distinct values present in both (any order)
     """
-    candidates = set(nums1)
+    candidates: set[int] = set(nums1)
     result: list[int] = []
     for num in nums2:
         if num in candidates:
