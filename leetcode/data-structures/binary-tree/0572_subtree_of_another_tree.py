@@ -13,7 +13,6 @@ Constraints:
 - sub_root is not guaranteed to be a subtree of root.
 
 Approach: Iterative DFS with in-order comparison
-Approach: Iterative DFS with in-order comparison
 - Degenerate cases resolve at the boundary: an empty sub_root is a subtree
   of anything (True); an empty root cannot contain a non-empty sub_root
   (False) — everything below runs in a None-free world

@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-08-21
-Completed: 120/120 (100%)
+Completed: 123/183
 
 ## Solve History
 
@@ -126,4 +126,7 @@ Completed: 120/120 (100%)
 # solved: 2026-08-20, medium, 90min, Surrounded Regions
 # solved: 2026-08-21, medium, 90min, Remove K Digits
 # solved: 2026-08-21, easy, 15min, Intersection of Two Arrays
+# solved: 2026-11-04, medium, 60min, Palindrome Partitioning
+# solved: 2026-11-04, hard, 60min, Median of Two Sorted Arrays
+# solved: 2026-11-04, easy, 15min, Single Number
 ```
