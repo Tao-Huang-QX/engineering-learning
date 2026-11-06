@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-08-21
-Completed: 123/183
+Completed: 127/183
 
 ## Solve History
 
@@ -129,4 +129,8 @@ Completed: 123/183
 # solved: 2026-11-04, medium, 60min, Palindrome Partitioning
 # solved: 2026-11-04, hard, 60min, Median of Two Sorted Arrays
 # solved: 2026-11-04, easy, 15min, Single Number
+# solved: 2026-11-06, medium, 30min, Maximum Product Subarray
+# solved: 2026-11-06, hard, 45min, Candy
+# solved: 2026-11-06, medium, 60min, Insert Interval
+# solved: 2026-11-06, medium, 45min, Pow(x, n)
 ```
