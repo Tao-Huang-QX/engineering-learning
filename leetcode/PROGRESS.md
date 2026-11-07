@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-08-21
-Completed: 127/183
+Completed: 130/183
 
 ## Solve History
 
@@ -133,4 +133,7 @@ Completed: 127/183
 # solved: 2026-11-06, hard, 45min, Candy
 # solved: 2026-11-06, medium, 60min, Insert Interval
 # solved: 2026-11-06, medium, 45min, Pow(x, n)
+# solved: 2026-11-07, medium, 40min, String to Integer (atoi)
+# solved: 2026-11-07, medium, 30min, Find the Duplicate Number
+# solved: 2026-11-07, medium, 30min, Subarray Sum Equals K
 ```
