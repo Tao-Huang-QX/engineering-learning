@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-08-21
-Completed: 130/183
+Completed: 133/183
 
 ## Solve History
 
@@ -136,4 +136,7 @@ Completed: 130/183
 # solved: 2026-11-07, medium, 40min, String to Integer (atoi)
 # solved: 2026-11-07, medium, 30min, Find the Duplicate Number
 # solved: 2026-11-07, medium, 30min, Subarray Sum Equals K
+# solved: 2026-11-08, medium, 40min, Longest Repeating Character Replacement
+# solved: 2026-11-08, medium, 40min, Sort Colors
+# solved: 2026-11-08, medium, 40min, Spiral Matrix
 ```
