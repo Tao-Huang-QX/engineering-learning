@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-08-21
-Completed: 133/183
+Completed: 135/183
 
 ## Solve History
 
@@ -139,4 +139,6 @@ Completed: 133/183
 # solved: 2026-11-08, medium, 40min, Longest Repeating Character Replacement
 # solved: 2026-11-08, medium, 40min, Sort Colors
 # solved: 2026-11-08, medium, 40min, Spiral Matrix
+# solved: 2026-11-09, easy, 30min, Diameter of Binary Tree
+# solved: 2026-11-09, medium, 45min, Network Delay Time
 ```
