@@ -21,21 +21,11 @@ Examples:
   Output: 0.25000
   Explanation: 2^-2 = 1 / 2^2 = 1 / 4 = 0.25
 
-Approach: Fast exponentiation by squaring (halve the exponent, square the result)
-- x^n = (x^(n/2))^2 when n is even; x * (x^((n-1)/2))^2 when odd — each
-  level halves n, so ~log2(n) multiplications instead of n
-- Precedence note: x * dfs(...) ** 2 parses as x * (dfs(...)**2) — the
-  intended shape, since ** outranks *
-- Negative exponent is handled at the BOUNDARY, not inside the recursion:
-  x^(-n) = 1 / x^n — one inversion in the wrapper keeps dfs positive-only
-  (recursing into my_pow with -n invites infinite recursion; and for
-  negative odds, Python's -1 % 2 == 1 plus floor division makes
-  dfs(-1) call itself)
-- C/Java talking point: n = -n at n = -2^31 overflows a 32-bit int —
-  widen before negating; Python ints make it a non-bug
-- Float note: CPython's ** raises OverflowError (not inf) past ~1.8e308,
-  and squaring amplifies relative error ~2x per level — tolerance for
-  the deep-exponent test is 1e-6 for exactly that reason
+Approach: Fast exponentiation by squaring
+- x^n = (x^(n/2))^2 when even; x * (x^((n-1)/2))^2 when odd — halves n
+  per level, ~log2(n) multiplications
+- Negative exponent handled at the BOUNDARY: x^(-n) = 1 / x^n in the
+  wrapper keeps dfs positive-only (negative odds self-recurse in Python)
 
 Time: O(log n)   Space: O(log n) recursion depth
 """
@@ -55,9 +45,9 @@ def my_pow(x: float, n: int) -> float:
         x ** n computed with fast exponentiation
     """
 
-    def dfs(n: int):
+    def dfs(n: int) -> float:
         if n == 0:
-            return 1
+            return 1.0
 
         if n % 2 == 1:
             return x * dfs((n - 1) // 2) ** 2

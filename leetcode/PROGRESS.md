@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-08-21
-Completed: 135/183
+Completed: 138/183
 
 ## Solve History
 
@@ -141,4 +141,7 @@ Completed: 135/183
 # solved: 2026-11-08, medium, 40min, Spiral Matrix
 # solved: 2026-11-09, easy, 30min, Diameter of Binary Tree
 # solved: 2026-11-09, medium, 45min, Network Delay Time
+# solved: 2026-11-10, easy, 15min, Ransom Note
+# solved: 2026-11-10, hard, 50min, Find Median from Data Stream
+# solved: 2026-11-10, medium, 40min, Add Two Numbers
 ```
