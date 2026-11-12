@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-08-21
-Completed: 138/183
+Completed: 141/183
 
 ## Solve History
 
@@ -144,4 +144,7 @@ Completed: 138/183
 # solved: 2026-11-10, easy, 15min, Ransom Note
 # solved: 2026-11-10, hard, 50min, Find Median from Data Stream
 # solved: 2026-11-10, medium, 40min, Add Two Numbers
+# solved: 2026-11-12, medium, 30min, Min Stack
+# solved: 2026-11-12, easy, 10min, Longest Common Prefix
+# solved: 2026-11-12, medium, 90min, Maximum XOR of Two Numbers in an Array
 ```
