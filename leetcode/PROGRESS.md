@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-08-21
-Completed: 141/183
+Completed: 142/183
 
 ## Solve History
 
@@ -147,4 +147,5 @@ Completed: 141/183
 # solved: 2026-11-12, medium, 30min, Min Stack
 # solved: 2026-11-12, easy, 10min, Longest Common Prefix
 # solved: 2026-11-12, medium, 90min, Maximum XOR of Two Numbers in an Array
+# solved: 2026-11-15, hard, 60min, N-Queens
 ```
