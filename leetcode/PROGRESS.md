@@ -151,4 +151,5 @@ Completed: 145/183
 # solved: 2026-11-15, medium, 40min, Find First and Last Position of Element in Sorted Array
 # solved: 2026-11-16, medium, 45min, Single Number II
 # solved: 2026-11-16, medium, 30min, Perfect Squares
+# solved: 2026-11-17, medium, 60min, Gas Station
 ```
