@@ -25,6 +25,9 @@ data-engineering/   Data infrastructure and pipeline work
   spark/            PySpark jobs and distributed processing
   infrastructure/   Docker, Airflow, dbt, Terraform configs
 
+agent-engineering/  Prompt, context engineering, and RAG practice
+  book-rag/         RAG over a PDF book (LlamaIndex + Docling + pgvector)
+
 shared/             Cross-domain utilities and helpers
   utils/            Shared Python utilities
 ```
@@ -38,6 +41,7 @@ shared/             Cross-domain utilities and helpers
 | Frontend | React + TypeScript | — |
 | Data Engineering | Python (PySpark, dbt) | SQL |
 | Infrastructure | Docker | Airflow, Terraform |
+| Agent Engineering | Python (LangChain, LangGraph, LangMem) | — |
 
 Adding new languages or domains: update this file, add a domain-level CLAUDE.md, and follow existing conventions.
 

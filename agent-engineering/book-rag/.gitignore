@@ -1,0 +1,19 @@
+# The book is copyrighted - never commit it (agent-engineering/CLAUDE.md)
+data/*
+!data/.gitkeep
+
+# Parse/inspect artifacts
+out/
+
+# Local config
+.env
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# User-specific eval question sets
+eval/questions.json
