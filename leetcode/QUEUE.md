@@ -127,7 +127,10 @@ Work through in order. Check off as completed.
 | 119 | 402 | [Remove K Digits](https://leetcode.com/problems/remove-k-digits/) | M | Monotonic stack |
 | 120 | 349 | [Intersection of Two Arrays](https://leetcode.com/problems/intersection-of-two-arrays/) | E | HashSet |
 
-<!-- Batch 1 of 3: one quiz per category -->
+### Batch 1 of 3 — rows 121–141 (one quiz per category)
+
+| # | LC | Problem | Diff | Pattern |
+|---|-----|---------|------|---------|
 | 121 | 131 | [Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/) | M | Backtracking + partition |
 | 122 | 4 | [Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/) | H | Binary search on partition |
 | 123 | 136 | [Single Number](https://leetcode.com/problems/single-number/) | E | XOR cancel pairs |
@@ -150,7 +153,10 @@ Work through in order. Check off as completed.
 | 140 | 14 | [Longest Common Prefix](https://leetcode.com/problems/longest-common-prefix/) | E | Vertical scan |
 | 141 | 421 | [Maximum XOR of Two Numbers in an Array](https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/) | M | Bitwise trie |
 
-<!-- Batch 2 of 3: one quiz per category -->
+### Batch 2 of 3 — rows 142–162 (one quiz per category)
+
+| # | LC | Problem | Diff | Pattern |
+|---|-----|---------|------|---------|
 | 142 | 51 | [N-Queens](https://leetcode.com/problems/n-queens/) | H | Backtracking + constraint sets |
 | 143 | 34 | [Find First and Last Position of Element in Sorted Array](https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/) | M | Lower/upper bound |
 | 144 | 137 | [Single Number II](https://leetcode.com/problems/single-number-ii/) | M | Bit counting |
@@ -173,7 +179,10 @@ Work through in order. Check off as completed.
 | 161 | 443 | [String Compression](https://leetcode.com/problems/string-compression/) | M | Run-length encoding |
 | 162 | 648 | [Replace Words](https://leetcode.com/problems/replace-words/) | M | Trie prefix match |
 
-<!-- Batch 3 of 3: one quiz per category -->
+### Batch 3 of 3 — rows 163–183 (one quiz per category)
+
+| # | LC | Problem | Diff | Pattern |
+|---|-----|---------|------|---------|
 | 163 | 22 | [Generate Parentheses](https://leetcode.com/problems/generate-parentheses/) | M | Backtracking |
 | 164 | 875 | [Koko Eating Bananas](https://leetcode.com/problems/koko-eating-bananas/) | M | Binary search on answer |
 | 165 | 260 | [Single Number III](https://leetcode.com/problems/single-number-iii/) | M | XOR + bit partition |

@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-08-21
-Completed: 145/183
+Completed: 148/183
 
 ## Solve History
 
@@ -152,4 +152,6 @@ Completed: 145/183
 # solved: 2026-11-16, medium, 45min, Single Number II
 # solved: 2026-11-16, medium, 30min, Perfect Squares
 # solved: 2026-11-17, medium, 60min, Gas Station
+# solved: 2026-11-18, medium, 35min, Non-overlapping Intervals
+# solved: 2026-11-18, easy, 40min, Sqrt(x)
 ```
