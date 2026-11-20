@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-08-21
-Completed: 149/183
+Completed: 150/183
 
 ## Solve History
 
@@ -155,4 +155,5 @@ Completed: 149/183
 # solved: 2026-11-18, medium, 35min, Non-overlapping Intervals
 # solved: 2026-11-18, easy, 40min, Sqrt(x)
 # solved: 2026-11-19, hard, 60min, Text Justification
+# solved: 2026-11-20, easy, 30min, Majority Element
 ```

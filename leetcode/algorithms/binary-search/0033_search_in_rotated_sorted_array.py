@@ -28,25 +28,25 @@ def search(nums: list[int], target: int) -> int:
     """
     left, right = 0, len(nums) - 1
     while left <= right:
-        middle = (left + right) // 2
+        # Ceiling mid certifies mid > left while left < right, so the
+        # strict compare below never self-compares. A 1-wide window
+        # self-compares again (mid == left), but the equality check has
+        # already cleared that element — the containment test a < t <= a
+        # is unsatisfiable, and right = mid - 1 exits with a correct -1.
+        mid = (left + right + 1) // 2
 
-        if nums[middle] == target:
-            return middle
-        # The <= is load-bearing: in a 2-element window the floor mid collapses
-        # onto left, so a strict < here would self-compare (always false), read
-        # the window as right-sorted, and discard the never-examined right
-        # element — losing targets like nums=[3, 1], target=1. A one-element
-        # left half is trivially sorted, hence the equal sign.
-        elif nums[left] <= nums[middle]:  # Left half is sorted
-            if nums[left] <= target < nums[middle]:  # Target in left half
-                right = middle - 1
+        if nums[mid] == target:
+            return mid
+        elif nums[left] < nums[mid]:  # Left half is sorted
+            if nums[left] <= target < nums[mid]:  # Target in left half
+                right = mid - 1
             else:  # Target in the right half
-                left = middle + 1
+                left = mid + 1
         else:  # Right half is sorted
-            if nums[middle] < target <= nums[right]:  # Target in right half
-                left = middle + 1
+            if nums[mid] < target <= nums[right]:  # Target in right half
+                left = mid + 1
             else:  # Target in the left half
-                right = middle - 1
+                right = mid - 1
     return -1
 
 
