@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-08-21
-Completed: 150/183
+Completed: 151/183
 
 ## Solve History
 
@@ -156,4 +156,5 @@ Completed: 150/183
 # solved: 2026-11-18, easy, 40min, Sqrt(x)
 # solved: 2026-11-19, hard, 60min, Text Justification
 # solved: 2026-11-20, easy, 30min, Majority Element
+# solved: 2026-11-21, medium, 25min, Corporate Flight Bookings
 ```
