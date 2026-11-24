@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-08-21
-Completed: 154/183
+Completed: 155/183
 
 ## Solve History
 
@@ -160,4 +160,5 @@ Completed: 154/183
 # solved: 2026-11-22, hard, 45min, Minimum Window Substring
 # solved: 2026-11-23, easy, 25min, Squares of a Sorted Array
 # solved: 2026-11-23, easy, 30min, Pascal's Triangle
+# solved: 2026-11-24, hard, 90min, Serialize and Deserialize Binary Tree
 ```
