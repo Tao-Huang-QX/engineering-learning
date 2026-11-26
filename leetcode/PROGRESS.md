@@ -1,7 +1,7 @@
 # LeetCode Progress
 
 Last updated: 2026-08-21
-Completed: 156/183
+Completed: 158/183
 
 ## Solve History
 
@@ -162,4 +162,6 @@ Completed: 156/183
 # solved: 2026-11-23, easy, 30min, Pascal's Triangle
 # solved: 2026-11-24, hard, 90min, Serialize and Deserialize Binary Tree
 # solved: 2026-11-25, hard, 90min, Bus Routes
+# solved: 2026-11-26, medium, 30min, 4Sum II
+# solved: 2026-11-26, medium, 30min, K Closest Points to Origin
 ```
