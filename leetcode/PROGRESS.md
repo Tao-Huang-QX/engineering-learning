@@ -1,7 +1,6 @@
 # LeetCode Progress
 
-Last updated: 2026-08-21
-Completed: 158/183
+Completed: 160/183
 
 ## Solve History
 
@@ -164,4 +163,6 @@ Completed: 158/183
 # solved: 2026-11-25, hard, 90min, Bus Routes
 # solved: 2026-11-26, medium, 30min, 4Sum II
 # solved: 2026-11-26, medium, 30min, K Closest Points to Origin
+# solved: 2026-11-27, medium, 30min, Remove Nth Node From End of List
+# solved: 2026-11-27, hard, 60min, Basic Calculator
 ```
